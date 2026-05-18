@@ -22,10 +22,15 @@ The main goal is to turn a large, multidimensional dataset into a clear visual s
 Supporting questions:
 
 1. Which countries have produced the largest refugee populations over time?
-2. Which host countries receive the highest number of refugees and asylum-seekers?
-3. How do displacement patterns differ across regions?
+2. Which host countries receive the highest numbers of refugees and asylum-seekers?
+3. How do displacement patterns differ across regions and income groups?
 4. How has the global displacement trend changed over the last two decades?
-5. Is hosting pressure related to population size, income level, or regional proximity?
+5. Which regions experience the fastest growth in forcibly displaced populations?
+6. Is hosting pressure related to population size, GDP per capita, income level, or geographic proximity?
+7. Which countries host disproportionately large refugee populations relative to their population size?
+8. How concentrated are refugee flows between specific origin-host country pairs?
+9. Which countries act as both major refugee-producing and refugee-hosting nations?
+10. How stable or volatile are refugee movement patterns across time?
 
 ---
 
