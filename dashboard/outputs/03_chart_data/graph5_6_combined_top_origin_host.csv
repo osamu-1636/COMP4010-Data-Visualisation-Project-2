@@ -1,0 +1,21 @@
+chart_role,rank,country,iso3,mapping_status,map_eligible_flag,value_observed,share_of_selected_total,source_rows,observed_rows,year,population_scope,metric_type
+Graph 5 — Top origin countries,1,Syrian Arab Republic,SYR,manual_iso,True,5717017.0,0.28271079533178956,393,350,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,2,Afghanistan,AFG,pycountry_exact_or_alias,True,2984568.0,0.14758913485858247,312,282,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,3,South Sudan,SSD,pycountry_exact_or_alias,True,1442327.0,0.07132415616369762,165,121,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,4,Somalia,SOM,pycountry_exact_or_alias,True,1072974.0,0.053059372205877926,357,310,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,5,Sudan,SDN,pycountry_exact_or_alias,True,697552.0,0.034494471628347526,336,284,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,6,Democratic Republic of the Congo,COD,manual_iso,True,629419.0,0.03112524347696354,321,277,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,7,Iraq,IRQ,pycountry_exact_or_alias,True,610063.0,0.030168074702681055,336,302,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,8,Burundi,BDI,pycountry_exact_or_alias,True,596466.0,0.02949569281469186,246,199,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,9,Myanmar,MMR,pycountry_exact_or_alias,True,546466.0,0.027023155166720988,153,126,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 5 — Top origin countries,10,Eritrea,ERI,pycountry_exact_or_alias,True,523670.0,0.02589587580225811,315,262,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,1,Turkey,TUR,manual_iso,True,3115275.0,0.15047375486352005,243,197,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,2,Pakistan,PAK,pycountry_exact_or_alias,True,1357399.0,0.06556497400004405,72,59,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,3,Germany,DEU,pycountry_exact_or_alias,True,1256691.0,0.06070058453048025,501,440,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,4,Uganda,UGA,pycountry_exact_or_alias,True,1162672.0,0.05615928658454825,99,78,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,5,Lebanon,LBN,pycountry_exact_or_alias,True,1031217.0,0.04980975806922167,186,132,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,6,Iran,IRN,manual_iso,True,979526.0,0.0473129836712471,18,18,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,7,Ethiopia,ETH,pycountry_exact_or_alias,True,794094.0,0.03835626257540412,81,59,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,8,Jordan,JOR,pycountry_exact_or_alias,True,720748.0,0.03481351016214374,144,113,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,9,United States,USA,manual_iso,True,712731.0,0.03442627369257337,561,516,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+Graph 6 — Top host countries,10,Kenya,KEN,pycountry_exact_or_alias,True,494822.0,0.02390085123434583,114,93,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed

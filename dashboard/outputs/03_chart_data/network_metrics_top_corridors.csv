@@ -1,0 +1,221 @@
+node,node_type,degree,in_strength,out_strength,betweenness
+Host: Turkey,host,7,2867571.0,0.0,0.0
+Host: Iran,host,2,979410.0,0.0,0.0
+Host: Ethiopia,host,7,791568.0,0.0,0.0
+Host: Jordan,host,5,683810.0,0.0,0.0
+Host: Democratic Republic of the Congo,host,5,451221.0,0.0,0.0
+Host: Germany,host,50,368908.0,0.0,0.0
+Host: Chad,host,4,350005.0,0.0,0.0
+Host: Sudan,host,8,324332.0,0.0,0.0
+Host: China,host,1,317098.0,0.0,0.0
+Host: Bangladesh,host,1,276198.0,0.0,0.0
+Host: Yemen,host,5,269030.0,0.0,0.0
+Host: South Sudan,host,5,263408.0,0.0,0.0
+Host: Iraq,host,6,251693.0,0.0,0.0
+Host: Uganda,host,9,218522.0,0.0,0.0
+Host: Egypt,host,10,215737.0,0.0,0.0
+Host: United States,host,68,206809.0,0.0,0.0
+Host: India,host,4,181192.0,0.0,0.0
+Host: Niger,host,3,180333.0,0.0,0.0
+Host: Afghanistan,host,2,173958.0,0.0,0.0
+Host: Tanzania,host,2,168769.0,0.0,0.0
+Host: Rwanda,host,2,156033.0,0.0,0.0
+Host: Malaysia,host,9,134459.0,0.0,0.0
+Host: France,host,45,103447.0,0.0,0.0
+Host: Ecuador,host,1,101161.0,0.0,0.0
+Host: Algeria,host,3,99344.0,0.0,0.0
+Host: Italy,host,31,95065.0,0.0,0.0
+Host: Cameroon,host,4,93515.0,0.0,0.0
+Host: Mauritania,host,2,72645.0,0.0,0.0
+Host: Sweden,host,20,59257.0,0.0,0.0
+Host: Bosnia and Herzegovina,host,2,57601.0,0.0,0.0
+Host: Austria,host,14,55029.0,0.0,0.0
+Host: Canada,host,38,53185.0,0.0,0.0
+Host: United Kingdom,host,25,47737.0,0.0,0.0
+Host: South Africa,host,18,47216.0,0.0,0.0
+Host: Angola,host,10,41471.0,0.0,0.0
+Host: Switzerland,host,17,40167.0,0.0,0.0
+Host: Norway,host,10,35150.0,0.0,0.0
+Host: Serbia and Kosovo (historical UN label),host,5,34976.0,0.0,0.0
+Host: Israel,host,2,32459.0,0.0,0.0
+Host: Burkina Faso,host,1,32017.0,0.0,0.0
+Host: Kenya,host,9,31877.0,0.0,0.0
+Host: Brazil,host,14,29729.0,0.0,0.0
+Host: Libya,host,6,29444.0,0.0,0.0
+Host: Denmark,host,7,28463.0,0.0,0.0
+Host: Netherlands,host,13,27923.0,0.0,0.0
+Host: Zambia,host,5,26671.0,0.0,0.0
+Host: Greece,host,8,26024.0,0.0,0.0
+Host: Australia,host,13,25904.0,0.0,0.0
+Host: Djibouti,host,4,24790.0,0.0,0.0
+Host: Liberia,host,2,20031.0,0.0,0.0
+Host: Belgium,host,12,19229.0,0.0,0.0
+Host: Armenia,host,3,17689.0,0.0,0.0
+Host: Mali,host,3,17207.0,0.0,0.0
+Host: Japan,host,10,16028.0,0.0,0.0
+Host: Spain,host,7,14550.0,0.0,0.0
+Host: Croatia,host,1,14518.0,0.0,0.0
+Host: Senegal,host,1,13683.0,0.0,0.0
+Host: Syrian Arab Republic,host,3,12910.0,0.0,0.0
+Host: Malawi,host,4,12825.0,0.0,0.0
+Host: Bulgaria,host,4,12440.0,0.0,0.0
+Host: Nepal,host,2,11798.0,0.0,0.0
+Host: Togo,host,2,11777.0,0.0,0.0
+Host: Central African Republic,host,3,11734.0,0.0,0.0
+Host: Somalia,host,2,11357.0,0.0,0.0
+Host: Lebanon,host,4,11220.0,0.0,0.0
+Host: Ghana,host,3,11110.0,0.0,0.0
+Host: Finland,host,6,10318.0,0.0,0.0
+Host: El Salvador,host,1,9800.0,0.0,0.0
+Host: Papua New Guinea,host,1,9368.0,0.0,0.0
+Host: Guinea-Bissau,host,1,8374.0,0.0,0.0
+Host: Gambia,host,1,7470.0,0.0,0.0
+Host: Malta,host,4,6334.0,0.0,0.0
+Host: Mozambique,host,4,6324.0,0.0,0.0
+Host: Indonesia,host,4,5285.0,0.0,0.0
+Host: Panama,host,5,5035.0,0.0,0.0
+Host: Honduras,host,1,4800.0,0.0,0.0
+Host: Guinea,host,1,4504.0,0.0,0.0
+Host: Pakistan,host,1,4447.0,0.0,0.0
+Host: Costa Rica,host,3,4440.0,0.0,0.0
+Host: Russia,host,3,4211.0,0.0,0.0
+Host: Peru,host,2,4144.0,0.0,0.0
+Host: Burundi,host,2,3603.0,0.0,0.0
+Host: Cyprus,host,3,3550.0,0.0,0.0
+Host: South Korea,host,4,3452.0,0.0,0.0
+Host: Zimbabwe,host,4,3325.0,0.0,0.0
+Host: Morocco,host,1,3242.0,0.0,0.0
+Host: Republic of the Congo,host,3,2874.0,0.0,0.0
+Host: Albania,host,1,2745.0,0.0,0.0
+Host: Tajikistan,host,1,2711.0,0.0,0.0
+Host: Thailand,host,2,2651.0,0.0,0.0
+Host: Eritrea,host,1,2244.0,0.0,0.0
+Host: Hungary,host,3,2236.0,0.0,0.0
+Host: Poland,host,1,2185.0,0.0,0.0
+Host: Mexico,host,2,1786.0,0.0,0.0
+Host: Romania,host,1,1775.0,0.0,0.0
+Host: Botswana,host,2,1617.0,0.0,0.0
+Host: Gabon,host,2,1567.0,0.0,0.0
+Host: Ukraine,host,1,1497.0,0.0,0.0
+Host: Belize,host,1,1459.0,0.0,0.0
+Host: Argentina,host,1,1391.0,0.0,0.0
+Host: Georgia,host,2,1371.0,0.0,0.0
+Host: Namibia,host,1,1322.0,0.0,0.0
+Host: Belarus,host,1,1184.0,0.0,0.0
+Host: Chile,host,1,1054.0,0.0,0.0
+Host: Montenegro,host,1,883.0,0.0,0.0
+Host: Venezuela,host,1,882.0,0.0,0.0
+Host: Côte d'Ivoire,host,1,860.0,0.0,0.0
+Host: Ireland,host,1,758.0,0.0,0.0
+Host: United Arab Emirates,host,1,741.0,0.0,0.0
+Host: Dominican Republic,host,1,728.0,0.0,0.0
+Host: Luxembourg,host,1,686.0,0.0,0.0
+Host: Sierra Leone,host,1,654.0,0.0,0.0
+Host: Lithuania,host,1,624.0,0.0,0.0
+Host: Benin,host,1,617.0,0.0,0.0
+Host: North Macedonia,host,1,616.0,0.0,0.0
+Host: Kazakhstan,host,1,599.0,0.0,0.0
+Origin: Syrian Arab Republic,origin,38,0.0,4059888.0,0.0
+Origin: Afghanistan,origin,30,0.0,1216824.0,0.0
+Origin: South Sudan,origin,7,0.0,712256.0,0.0
+Origin: Sudan,origin,22,0.0,636387.0,0.0
+Origin: Somalia,origin,32,0.0,600111.0,0.0
+Origin: Myanmar,origin,10,0.0,335906.0,0.0
+Origin: Vietnam,origin,7,0.0,329966.0,0.0
+Origin: Burundi,origin,12,0.0,296463.0,0.0
+Origin: Eritrea,origin,25,0.0,272693.0,0.0
+Origin: Rwanda,origin,15,0.0,263025.0,0.0
+Origin: Iraq,origin,32,0.0,231846.0,0.0
+Origin: Nigeria,origin,15,0.0,226988.0,0.0
+Origin: China,origin,15,0.0,185282.0,0.0
+Origin: Uganda,origin,6,0.0,184495.0,0.0
+Origin: Democratic Republic of the Congo,origin,26,0.0,177178.0,0.0
+Origin: Mali,origin,7,0.0,147150.0,0.0
+Origin: Central African Republic,origin,9,0.0,131953.0,0.0
+Origin: Western Sahara,origin,4,0.0,117955.0,0.0
+Origin: Colombia,origin,10,0.0,114713.0,0.0
+Origin: Pakistan,origin,19,0.0,99773.0,0.0
+Origin: State of Palestine,origin,11,0.0,89857.0,0.0
+Origin: Philippines,origin,3,0.0,82226.0,0.0
+Origin: Sri Lanka,origin,12,0.0,78518.0,0.0
+Origin: Bosnia and Herzegovina,origin,5,0.0,69206.0,0.0
+Origin: Iran,origin,19,0.0,67452.0,0.0
+Origin: Ethiopia,origin,19,0.0,56299.0,0.0
+Origin: Côte d'Ivoire,origin,10,0.0,48321.0,0.0
+Origin: Mauritania,origin,5,0.0,40405.0,0.0
+Origin: Croatia,origin,3,0.0,40028.0,0.0
+Origin: El Salvador,origin,8,0.0,30416.0,0.0
+Origin: Senegal,origin,8,0.0,30344.0,0.0
+Origin: Chad,origin,6,0.0,29402.0,0.0
+Origin: Turkey,origin,12,0.0,27361.0,0.0
+Origin: Haiti,origin,5,0.0,27100.0,0.0
+Origin: Yemen,origin,10,0.0,26991.0,0.0
+Origin: Angola,origin,6,0.0,26738.0,0.0
+Origin: Russia,origin,13,0.0,26348.0,0.0
+Origin: Serbia and Kosovo (historical UN label),origin,9,0.0,23652.0,0.0
+Origin: Ukraine,origin,11,0.0,23456.0,0.0
+Origin: Venezuela,origin,7,0.0,20655.0,0.0
+Origin: Ghana,origin,5,0.0,19071.0,0.0
+Origin: Guinea,origin,7,0.0,18963.0,0.0
+Origin: Gambia,origin,4,0.0,18314.0,0.0
+Origin: Bangladesh,origin,11,0.0,18266.0,0.0
+Origin: Zimbabwe,origin,6,0.0,17524.0,0.0
+Origin: Niger,origin,1,0.0,14678.0,0.0
+Origin: India,origin,8,0.0,14190.0,0.0
+Origin: Honduras,origin,4,0.0,13822.0,0.0
+Origin: Indonesia,origin,4,0.0,13011.0,0.0
+Origin: Guatemala,origin,2,0.0,11913.0,0.0
+Origin: Cambodia,origin,1,0.0,11566.0,0.0
+Origin: Bhutan,origin,1,0.0,11213.0,0.0
+Origin: Nepal,origin,3,0.0,10549.0,0.0
+Origin: Mexico,origin,2,0.0,10263.0,0.0
+Origin: Albania,origin,6,0.0,10192.0,0.0
+Origin: Egypt,origin,7,0.0,9902.0,0.0
+Origin: Azerbaijan,origin,4,0.0,8158.0,0.0
+Origin: Republic of the Congo,origin,4,0.0,8113.0,0.0
+Origin: Cameroon,origin,5,0.0,8105.0,0.0
+Origin: Georgia,origin,5,0.0,8029.0,0.0
+Origin: Libya,origin,8,0.0,7426.0,0.0
+Origin: Togo,origin,6,0.0,7308.0,0.0
+Origin: Laos,origin,1,0.0,6841.0,0.0
+Origin: North Macedonia,origin,1,0.0,6057.0,0.0
+Origin: Malaysia,origin,1,0.0,5793.0,0.0
+Origin: Mozambique,origin,3,0.0,5608.0,0.0
+Origin: Kenya,origin,2,0.0,5198.0,0.0
+Origin: Armenia,origin,5,0.0,5183.0,0.0
+Origin: Sierra Leone,origin,4,0.0,5017.0,0.0
+Origin: Cuba,origin,4,0.0,4963.0,0.0
+Origin: Liberia,origin,5,0.0,4230.0,0.0
+Origin: Algeria,origin,2,0.0,4017.0,0.0
+Origin: Morocco,origin,2,0.0,3842.0,0.0
+Origin: Moldova,origin,2,0.0,3434.0,0.0
+Origin: Malawi,origin,1,0.0,3396.0,0.0
+Origin: Lebanon,origin,4,0.0,3121.0,0.0
+Origin: Mongolia,origin,3,0.0,2527.0,0.0
+Origin: Uzbekistan,origin,2,0.0,2145.0,0.0
+Origin: Tajikistan,origin,1,0.0,2112.0,0.0
+Origin: Romania,origin,1,0.0,2041.0,0.0
+Origin: Peru,origin,1,0.0,1992.0,0.0
+Origin: Nicaragua,origin,2,0.0,1958.0,0.0
+Origin: Burkina Faso,origin,2,0.0,1631.0,0.0
+Origin: Dominican Republic,origin,2,0.0,1619.0,0.0
+Origin: Hungary,origin,1,0.0,1502.0,0.0
+Origin: Jamaica,origin,2,0.0,1422.0,0.0
+Origin: Saint Vincent and the Grenadines,origin,1,0.0,1285.0,0.0
+Origin: Kyrgyzstan,origin,1,0.0,1089.0,0.0
+Origin: Jordan,origin,1,0.0,1086.0,0.0
+Origin: Saint Lucia,origin,1,0.0,968.0,0.0
+Origin: Belarus,origin,1,0.0,955.0,0.0
+Origin: Namibia,origin,1,0.0,924.0,0.0
+Origin: Montenegro,origin,1,0.0,915.0,0.0
+Origin: Guinea-Bissau,origin,1,0.0,903.0,0.0
+Origin: Tunisia,origin,1,0.0,856.0,0.0
+Origin: Czechia,origin,1,0.0,811.0,0.0
+Origin: Ecuador,origin,1,0.0,745.0,0.0
+Origin: Poland,origin,1,0.0,691.0,0.0
+Origin: Lesotho,origin,1,0.0,688.0,0.0
+Origin: Kazakhstan,origin,1,0.0,658.0,0.0
+Origin: Brazil,origin,1,0.0,594.0,0.0
+Origin: Kuwait,origin,1,0.0,588.0,0.0
+Origin: Djibouti,origin,1,0.0,587.0,0.0
+Origin: North Korea,origin,1,0.0,585.0,0.0

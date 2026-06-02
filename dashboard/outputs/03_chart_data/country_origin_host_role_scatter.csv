@@ -1,0 +1,212 @@
+country,iso3,origin_stock_observed,host_stock_observed,net_host_minus_origin,role_class,year,population_scope
+Turkey,TUR,81128.0,3115275.0,3034147.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Pakistan,PAK,173069.0,1357399.0,1184330.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Germany,DEU,180.0,1256691.0,1256511.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Uganda,UGA,191486.0,1162672.0,971186.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Lebanon,LBN,13145.0,1031217.0,1018072.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Iran,IRN,181763.0,979526.0,797763.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Ethiopia,ETH,162601.0,794094.0,631493.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Jordan,JOR,4424.0,720748.0,716324.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+United States,USA,548.0,712731.0,712183.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Kenya,KEN,11045.0,494822.0,483777.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Tanzania,TZA,1764.0,458822.0,457058.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Democratic Republic of the Congo,COD,629419.0,453256.0,-176163.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Sudan,SDN,697552.0,441257.0,-256295.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Chad,TCD,34019.0,429851.0,395832.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Cameroon,CMR,21218.0,378642.0,357424.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+France,FRA,146.0,367226.0,367080.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+China,CHN,279856.0,317885.0,38029.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Sweden,SWE,19.0,313113.0,313094.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+South Africa,ZAF,1369.0,309208.0,307839.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Yemen,YEM,34219.0,278856.0,244637.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Iraq,IRQ,610063.0,276470.0,-333593.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Bangladesh,BGD,39714.0,276198.0,236484.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+South Sudan,SSD,1442327.0,264333.0,-1177994.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Egypt,EGY,32871.0,263328.0,230457.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Italy,ITA,176.0,247178.0,247002.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Russia,RUS,97701.0,231942.0,134241.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Malaysia,MYS,6575.0,228475.0,221900.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+India,IND,35248.0,207009.0,171761.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Niger,NER,16709.0,180818.0,164109.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Afghanistan,AFG,2984568.0,174116.0,-2810452.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Venezuela,VEN,52582.0,172917.0,120335.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Austria,AUT,0.0,169544.0,169544.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+United Kingdom,GBR,178.0,162349.0,162171.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Rwanda,RWA,303714.0,157950.0,-145764.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Ecuador,ECU,14706.0,127390.0,112684.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Canada,CAN,125.0,121167.0,121042.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Switzerland,CHE,9.0,113351.0,113342.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Netherlands,NLD,70.0,112075.0,112005.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Thailand,THA,1086.0,111661.0,110575.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Algeria,DZA,10809.0,99914.0,89105.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Greece,GRC,174.0,86312.0,86138.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Mauritania,MRT,43583.0,74676.0,31093.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Australia,AUS,5.0,71574.0,71569.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Brazil,BRA,4545.0,67920.0,63375.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Norway,NOR,5.0,66936.0,66931.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Belgium,BEL,54.0,66187.0,66133.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Burundi,BDI,596466.0,61714.0,-534752.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Bosnia and Herzegovina,BIH,73707.0,57734.0,-15973.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Zambia,ZMB,536.0,57186.0,56650.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Republic of the Congo,COG,17623.0,56241.0,38618.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Syrian Arab Republic,SYR,5717017.0,45892.0,-5671125.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Angola,AGO,33056.0,45668.0,12612.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Israel,ISR,991.0,44586.0,43595.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Denmark,DNK,0.0,39718.0,39718.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Libya,LBY,15282.0,38517.0,23235.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Serbia and Kosovo (historical UN label),SRB_XKX,58571.0,36615.0,-21956.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Bulgaria,BGR,1026.0,33764.0,32738.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Spain,ESP,148.0,33303.0,33155.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Burkina Faso,BFA,6500.0,32662.0,26162.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Malawi,MWI,4144.0,30400.0,26256.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Nepal,NPL,20438.0,26159.0,5721.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Djibouti,DJI,2246.0,25843.0,23597.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Somalia,SOM,1072974.0,24466.0,-1048508.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Guatemala,GTM,58741.0,24195.0,-34546.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Finland,FIN,0.0,23842.0,23842.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Panama,PAN,109.0,21737.0,21628.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Japan,JPN,121.0,21313.0,21192.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Liberia,LBR,9208.0,20461.0,11253.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Armenia,ARM,23776.0,17941.0,-5835.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Mali,MLI,166054.0,17809.0,-148245.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Senegal,SEN,39297.0,17763.0,-21534.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Mozambique,MOZ,5732.0,17629.0,11897.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Cyprus,CYP,0.0,17471.0,17471.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Croatia,HRV,41065.0,15297.0,-25768.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Poland,POL,1700.0,15080.0,13380.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Indonesia,IDN,16605.0,14358.0,-2247.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Togo,TGO,10895.0,13243.0,2348.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Ghana,GHA,27019.0,13201.0,-13818.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Montenegro,MNE,1830.0,12479.0,10649.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Central African Republic,CAF,522441.0,12397.0,-510044.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Zimbabwe,ZWE,61452.0,10032.0,-51420.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Ireland,IRL,38.0,9901.0,9863.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+El Salvador,SLV,91551.0,9836.0,-81715.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Ukraine,UKR,266870.0,9782.0,-257088.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Papua New Guinea,PNG,652.0,9546.0,8894.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Guinea-Bissau,GNB,3490.0,9278.0,5788.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Mexico,MEX,74612.0,8754.0,-65858.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Malta,MLT,0.0,8754.0,8754.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+South Korea,KOR,509.0,8578.0,8069.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Hungary,HUN,4560.0,8067.0,3507.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Gambia,GMB,30438.0,7936.0,-22502.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Costa Rica,CRI,494.0,7748.0,7254.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Argentina,ARG,319.0,7302.0,6983.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Morocco,MAR,9410.0,6666.0,-2744.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Peru,PER,4870.0,5928.0,1058.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Guinea,GIN,41882.0,5156.0,-36726.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Chile,CHL,684.0,4899.0,4215.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Honduras,HND,50456.0,4821.0,-45635.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Czechia,CZE,1488.0,4314.0,2826.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Luxembourg,LUX,0.0,4165.0,4165.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Belize,BLZ,203.0,4136.0,3933.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Namibia,NAM,1519.0,3439.0,1920.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Tajikistan,TJK,4092.0,3150.0,-942.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Romania,ROU,3670.0,2907.0,-763.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Albania,ALB,34821.0,2861.0,-31960.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Botswana,BWA,386.0,2813.0,2427.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Gabon,GAB,567.0,2792.0,2225.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Georgia,GEO,16630.0,2392.0,-14238.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Eritrea,ERI,523670.0,2366.0,-521304.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Portugal,PRT,76.0,1934.0,1858.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Belarus,BLR,5727.0,1841.0,-3886.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Nigeria,NGA,295582.0,1801.0,-293781.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Côte d'Ivoire,CIV,65333.0,1746.0,-63587.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Kuwait,KWT,1651.0,1733.0,82.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+New Zealand,NZL,41.0,1601.0,1560.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+United Arab Emirates,ARE,254.0,1488.0,1234.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Azerbaijan,AZE,18162.0,1404.0,-16758.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Dominican Republic,DOM,2683.0,1365.0,-1318.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Sri Lanka,LKA,132636.0,1168.0,-131468.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Lithuania,LTU,137.0,1139.0,1002.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Eswatini,SWZ,357.0,1082.0,725.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Slovakia,SVK,1372.0,1034.0,-338.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Benin,BEN,1621.0,1018.0,-603.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Kazakhstan,KAZ,4537.0,780.0,-3757.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Bolivia,BOL,927.0,761.0,-166.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Nauru,NRU,0.0,757.0,757.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Slovenia,SVN,27.0,728.0,701.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Sierra Leone,SLE,10739.0,683.0,-10056.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Oman,OMN,34.0,676.0,642.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Tunisia,TUN,3671.0,661.0,-3010.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Nicaragua,NIC,3520.0,653.0,-2867.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+North Macedonia,MKD,8588.0,639.0,-7949.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Philippines,PHL,83556.0,630.0,-82926.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Uruguay,URY,101.0,611.0,510.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Colombia,COL,323601.0,584.0,-323017.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Moldova,MDA,6366.0,446.0,-5920.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Latvia,LVA,254.0,446.0,192.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Kyrgyzstan,KGZ,4903.0,443.0,-4460.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Bahrain,BHR,522.0,371.0,-151.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Cuba,CUB,10915.0,330.0,-10585.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Estonia,EST,335.0,315.0,-20.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Qatar,QAT,33.0,309.0,276.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Trinidad and Tobago,TTO,537.0,290.0,-247.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Iceland,ISL,0.0,254.0,254.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Cambodia,KHM,12781.0,226.0,-12555.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Paraguay,PRY,171.0,225.0,54.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Liechtenstein,LIE,0.0,204.0,204.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Saudi Arabia,SAU,1880.0,177.0,-1703.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Curaçao,CUW,35.0,104.0,69.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Hong Kong,HKG,112.0,86.0,-26.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Suriname,SUR,36.0,38.0,2.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Cayman Islands,CYM,6.0,37.0,31.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Lesotho,LSO,698.0,36.0,-662.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Madagascar,MDG,303.0,34.0,-269.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Monaco,MCO,0.0,32.0,32.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Uzbekistan,UZB,6796.0,26.0,-6770.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Turkmenistan,TKM,1395.0,26.0,-1369.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Bahamas,BHS,407.0,21.0,-386.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Jamaica,JAM,3115.0,16.0,-3099.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Fiji,FJI,1301.0,7.0,-1294.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Guyana,GUY,555.0,7.0,-548.0,both_origin_and_host,2016,Refugees+Asylum-seekers+Others of concern
+Sint Maarten,SXM,0.0,5.0,5.0,mostly_host,2016,Refugees+Asylum-seekers+Others of concern
+Myanmar,MMR,546466.0,0.0,-546466.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Vietnam,VNM,333933.0,0.0,-333933.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Western Sahara,ESH,118637.0,0.0,-118637.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+State of Palestine,PSE,105887.0,0.0,-105887.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Haiti,HTI,75031.0,0.0,-75031.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Bhutan,BTN,12009.0,0.0,-12009.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Laos,LAO,7387.0,0.0,-7387.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Mongolia,MNG,6067.0,0.0,-6067.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+North Korea,PRK,1931.0,0.0,-1931.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Saint Vincent and the Grenadines,VCT,1461.0,0.0,-1461.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Saint Lucia,LCA,1189.0,0.0,-1189.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Comoros,COM,778.0,0.0,-778.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Mauritius,MUS,299.0,0.0,-299.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Equatorial Guinea,GNQ,209.0,0.0,-209.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Barbados,BRB,183.0,0.0,-183.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Grenada,GRD,163.0,0.0,-163.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Solomon Islands,SLB,145.0,0.0,-145.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Dominica,DMA,130.0,0.0,-130.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Antigua and Barbuda,ATG,105.0,0.0,-105.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Tonga,TON,103.0,0.0,-103.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Cabo Verde,CPV,98.0,0.0,-98.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Maldives,MDV,83.0,0.0,-83.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Singapore,SGP,81.0,0.0,-81.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Saint Kitts and Nevis,KNA,61.0,0.0,-61.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Sao Tome and Principe,STP,34.0,0.0,-34.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Niue,NIU,19.0,0.0,-19.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Timor-Leste,TLS,14.0,0.0,-14.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Turks and Caicos Islands,TCA,14.0,0.0,-14.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Seychelles,SYC,10.0,0.0,-10.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+Samoa,WSM,5.0,0.0,-5.0,mostly_origin,2016,Refugees+Asylum-seekers+Others of concern
+American Samoa,ASM,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Andorra,AND,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Anguilla,AIA,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Aruba,ABW,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Bermuda,BMU,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Brunei,BRN,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Cook Islands,COK,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+French Guiana,GUF,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Gibraltar,GIB,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Kiribati,KIR,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Macao,MAC,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Marshall Islands,MHL,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Micronesia,FSM,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Norfolk Island,NFK,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Palau,PLW,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+San Marino,SMR,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Tuvalu,TUV,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Vanuatu,VUT,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern
+Wallis and Futuna,WLF,0.0,0.0,0.0,no_observed_role,2016,Refugees+Asylum-seekers+Others of concern

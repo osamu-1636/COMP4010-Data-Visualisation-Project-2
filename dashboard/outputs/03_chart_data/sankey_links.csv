@@ -1,0 +1,51 @@
+year,origin_country_std,origin_iso3,host_country_std,host_iso3,population_type_std,value_observed,source_rows
+2016,Syrian Arab Republic,SYR,Turkey,TUR,Refugees,2823987.0,1
+2016,Afghanistan,AFG,Pakistan,PAK,Refugees,1352160.0,1
+2016,Syrian Arab Republic,SYR,Lebanon,LBN,Refugees,1005503.0,1
+2016,Afghanistan,AFG,Iran,IRN,Refugees,951142.0,1
+2016,Syrian Arab Republic,SYR,Jordan,JOR,Refugees,648836.0,1
+2016,South Sudan,SSD,Uganda,UGA,Refugees,639007.0,1
+2016,Syrian Arab Republic,SYR,Germany,DEU,Refugees,375122.0,1
+2016,South Sudan,SSD,Ethiopia,ETH,Refugees,338774.0,1
+2016,Somalia,SOM,Kenya,KEN,Refugees,324448.0,1
+2016,Vietnam,VNM,China,CHN,Refugees,317098.0,1
+2016,Sudan,SDN,Chad,TCD,Refugees,312468.0,1
+2016,South Sudan,SSD,Sudan,SDN,Refugees,297168.0,1
+2016,Central African Republic,CAF,Cameroon,CMR,Refugees,283602.0,1
+2016,Myanmar,MMR,Bangladesh,BGD,Refugees,276198.0,1
+2016,Somalia,SOM,Yemen,YEM,Refugees,255121.0,1
+2016,Rwanda,RWA,Democratic Republic of the Congo,COD,Refugees,245052.0,1
+2016,Somalia,SOM,Ethiopia,ETH,Refugees,242014.0,1
+2016,Sudan,SDN,South Sudan,SSD,Refugees,241510.0,1
+2016,Burundi,BDI,Tanzania,TZA,Refugees,230850.0,1
+2016,Syrian Arab Republic,SYR,Iraq,IRQ,Refugees,230836.0,1
+2016,Ukraine,UKR,Russia,RUS,Refugees,226232.0,1
+2016,Democratic Republic of the Congo,COD,Uganda,UGA,Refugees,205363.0,1
+2016,Uganda,UGA,Uganda,UGA,Others of concern,180000.0,1
+2016,Colombia,COL,Venezuela,VEN,Refugees,171920.0,1
+2016,Eritrea,ERI,Ethiopia,ETH,Refugees,165548.0,1
+2016,Burundi,BDI,Tanzania,TZA,Others of concern,162729.0,1
+2016,Afghanistan,AFG,Germany,DEU,Asylum-seekers,126522.0,1
+2016,Syrian Arab Republic,SYR,Egypt,EGY,Refugees,116013.0,1
+2016,Afghanistan,AFG,Turkey,TUR,Asylum-seekers,114693.0,1
+2016,Afghanistan,AFG,Afghanistan,AFG,Others of concern,114221.0,1
+2016,China,CHN,India,IND,Refugees,110098.0,1
+2016,Nigeria,NGA,Niger,NER,Refugees,105501.0,1
+2016,Eritrea,ERI,Sudan,SDN,Refugees,103176.0,1
+2016,Myanmar,MMR,Thailand,THA,Refugees,102633.0,1
+2016,Central African Republic,CAF,Democratic Republic of the Congo,COD,Refugees,102489.0,1
+2016,Colombia,COL,Ecuador,ECU,Refugees,101161.0,1
+2016,Syrian Arab Republic,SYR,Germany,DEU,Asylum-seekers,100527.0,1
+2016,Iraq,IRQ,Turkey,TUR,Asylum-seekers,99678.0,1
+2016,Syrian Arab Republic,SYR,Sweden,SWE,Refugees,96914.0,1
+2016,Western Sahara,ESH,Algeria,DZA,Refugees,90000.0,1
+2016,Nigeria,NGA,Cameroon,CMR,Refugees,88706.0,1
+2016,South Sudan,SSD,Kenya,KEN,Refugees,87141.0,1
+2016,Myanmar,MMR,Malaysia,MYS,Refugees,87036.0,1
+2016,Iraq,IRQ,Germany,DEU,Refugees,86045.0,1
+2016,Burundi,BDI,Rwanda,RWA,Refugees,82886.0,1
+2016,Philippines,PHL,Malaysia,MYS,Others of concern,80000.0,1
+2016,Democratic Republic of the Congo,COD,Rwanda,RWA,Refugees,73147.0,1
+2016,China,CHN,United States,USA,Refugees,72507.0,1
+2016,Central African Republic,CAF,Chad,TCD,Refugees,70223.0,1
+2016,State of Palestine,PSE,Egypt,EGY,Refugees,70027.0,1

@@ -1,0 +1,58 @@
+{
+  "output_dir": "/mnt/data/refugee_10_10_no_app_outputs_v2",
+  "year": 2016,
+  "top_n": 10,
+  "scope": "cross_border",
+  "scope_types": [
+    "Refugees",
+    "Asylum-seekers",
+    "Others of concern"
+  ],
+  "chart_data_files": [
+    "animated_host_map_by_year.csv",
+    "annual_population_by_type.csv",
+    "asylum_applications_decisions_by_year.csv",
+    "choropleth_host_latest.csv",
+    "country_origin_host_role_scatter.csv",
+    "crisis_story_syria_top_hosts_latest.csv",
+    "crisis_story_syria_trend.csv",
+    "crisis_storytelling_template.csv",
+    "demographics_age_sex_latest.csv",
+    "forecast_global_active_forced_displacement.csv",
+    "forecast_model_comparison.csv",
+    "graph5_6_combined_top_origin_host.csv",
+    "graph5_top_origin_countries.csv",
+    "graph6_top_host_countries.csv",
+    "host_pressure_per_100k.csv",
+    "kpi_cards_latest.csv",
+    "monthly_application_seasonality_profile.csv",
+    "monthly_applications_by_year_month.csv",
+    "network_metrics_top_corridors.csv",
+    "resettlement_by_year.csv",
+    "sankey_origin_host_status_decisions.csv",
+    "sankey_top_corridors.csv",
+    "top_asylum_application_corridors.csv",
+    "top_origin_host_corridors.csv",
+    "top_resettlement_destination_countries.csv"
+  ],
+  "eda_files": [
+    "input_validation_checklist.csv",
+    "origin_host_concentration_by_year.csv",
+    "time_series_vs_persons_of_concern_crosscheck.csv",
+    "zero_missing_redaction_summary_by_dataset.csv"
+  ],
+  "report_asset_files": [
+    "chart_data_coverage_by_component.csv",
+    "chart_narrative_cards.csv",
+    "core_clean_data_dictionary.csv",
+    "dashboard_component_matrix.csv",
+    "filter_options_summary.csv",
+    "rubric_alignment_checklist.csv",
+    "eda_methodology_and_findings.md",
+    "graph5_6_design_notes.md",
+    "preprocessing_methodology.md"
+  ],
+  "graph_rendering_in_this_script": false,
+  "app_included": false,
+  "handoff_note": "This EDA script prepares app-ready tables only. The teammate's app.py should read outputs/03_chart_data/."
+}

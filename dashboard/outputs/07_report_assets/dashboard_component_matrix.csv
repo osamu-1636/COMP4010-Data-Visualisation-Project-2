@@ -1,0 +1,15 @@
+dashboard_component,wireframe_match,source_dataset,output_file,status,metric_note
+KPI cards,Key figures panel,time_series_clean; asylum_seekers_clean,kpi_cards_latest.csv,ready,Latest year 2016; stock KPIs use Refugees+Asylum-seekers+Others of concern; asylum applications are flow metrics.
+Global trend line / stacked area,Refugees over time,time_series_clean,annual_population_by_type.csv,ready,Observed population-stock trend by category.
+Graph 5 ranked origins,Top origin countries,time_series_clean,graph5_top_origin_countries.csv,ready,"Observed stock, Refugees+Asylum-seekers+Others of concern, IDPs excluded in cross_border scope."
+Graph 6 ranked hosts,Top host countries,time_series_clean,graph6_top_host_countries.csv,ready,"Observed stock, Refugees+Asylum-seekers+Others of concern; host means country of asylum/residence."
+Sankey origin-host corridors,Origin → asylum country,time_series_clean,sankey_top_corridors.csv,ready,"Stock corridor, not literal border-crossing flow."
+Sankey origin-host-status,Origin → asylum country → status,asylum_seekers_clean,sankey_origin_host_status_decisions.csv,ready_with_caveat,Uses applications and decisions from the same reporting year; not cohort tracking.
+Choropleth map,Map by host country,time_series_clean,choropleth_host_latest.csv,ready,Absolute observed stock by host ISO3.
+Hosting pressure choropleth,Refugees per population,time_series_clean + optional WDI,host_pressure_per_100k.csv,partial_until_WDI_added,Requires population denominator from WDI to calculate per-100k pressure.
+Animated map,Animation by year,time_series_clean,animated_host_map_by_year.csv,ready,Yearly host-country stock values for animation_frame.
+Monthly asylum seasonality,Additional time-series detail,asylum_seekers_monthly_clean,monthly_application_seasonality_profile.csv,ready,"Application-flow seasonality, separate from stock metrics."
+Demographic profile,Demographic storytelling extension,demographics_clean,demographics_age_sex_latest.csv,ready,Latest-year age/sex profile.
+Network graph,Network graph origin-host,time_series_clean,network_metrics_top_corridors.csv,ready,Directed network from origin to host nodes using top corridors.
+Exploratory forecast,Advanced analytics / ML component,time_series_clean,forecast_global_active_forced_displacement.csv,ready_with_caveat,"Exploratory trend model, not causal or policy forecast."
+Crisis storytelling,Crisis storytelling panel,time_series_clean + manual annotations,crisis_storytelling_template.csv,partial_manual_annotation_needed,Quantitative trend is ready; historical event annotations should be cited manually.
