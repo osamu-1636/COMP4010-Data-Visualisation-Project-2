@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --ink: #111827;
+  --muted: #64748b;
+  --paper: #f7f1e8;
+  --card: #fffdf8;
+  --blue: #2f66c5;
+  --green: #6f9166;
+  --orange: #df7a26;
+  --purple: #8064b8;
+  --line: rgba(17,24,39,.18);
+  --shadow: 0 18px 45px rgba(15,23,42,.13);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, #fffaf0 0, var(--paper) 38%, #eee6d9 100%);
+  color: var(--ink);
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  overflow-x: hidden;
+}
+.container-fluid { padding: 0; }
+.app-shell { min-height: 100vh; }
+.command-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247,241,232,.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+  padding: 14px 28px 12px;
+}
+.brand-row { display: grid; grid-template-columns: 92px 1fr 170px; align-items: center; gap: 22px; }
+.brand-icon { width: 76px; height: 76px; display:flex; align-items:center; justify-content:center; border: 2px solid var(--ink); border-radius: 20px; background: white; box-shadow: 8px 8px 0 rgba(17,24,39,.12); }
+.globe-icon { width: 58px; height: 58px; }
+.brand-copy h1 { margin: 0; text-transform: uppercase; letter-spacing: .04em; font-weight: 900; font-size: clamp(36px, 4.8vw, 72px); line-height: .9; }
+.brand-copy p { margin: 10px 0 0; color: var(--muted); font-size: 17px; }
+.year-badge { justify-self:end; border: 2px solid var(--ink); padding: 20px 28px; text-transform: uppercase; text-align:center; background:white; box-shadow: 8px 8px 0 rgba(17,24,39,.12); }
+.year-badge div { font-size: 12px; letter-spacing:.08em; }
+.year-badge strong { font-size: 30px; }
+.filter-row { display:grid; grid-template-columns: 1.15fr 1fr 1.2fr 1.2fr 1.2fr .72fr .56fr; gap:12px; margin-top:14px; }
+.control { background: rgba(255,255,255,.88); border: 1px solid rgba(17,24,39,.22); border-radius: 18px; padding: 12px 14px; min-height: 82px; box-shadow: 0 5px 0 rgba(17,24,39,.08); }
+.control label { text-transform: uppercase; letter-spacing:.09em; font-size: 12px; font-weight: 900; color: var(--ink); }
+.reset-btn { width:100%; height: 58px; border-radius: 18px; border: 0; background: var(--ink); color: white; font-weight: 900; font-size: 18px; }
+.slide-dots { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 60; display:flex; flex-direction:column; gap:10px; }
+.slide-dots a { width: 40px; height: 40px; display:flex; align-items:center; justify-content:center; border-radius: 50%; background: rgba(255,255,255,.9); color: var(--ink); text-decoration:none; font-size: 12px; font-weight: 900; border: 1px solid rgba(17,24,39,.20); box-shadow: 0 6px 18px rgba(17,24,39,.12); }
+.story-slide { min-height: calc(100vh - 122px); scroll-snap-align: start; padding: 42px 58px 54px; }
+.snap-container { scroll-snap-type: y proximity; }
+.slide-inner { max-width: 1820px; margin: 0 auto; }
+.slide-title { display:grid; grid-template-columns: 78px 1fr; gap:26px; align-items:start; margin-bottom: 28px; }
+.slide-number { width:70px; height:70px; display:flex; align-items:center; justify-content:center; border:2px solid var(--ink); border-radius:22px; background:#fff; font-weight:900; font-size:20px; box-shadow: 7px 7px 0 rgba(17,24,39,.10); }
+.slide-kicker { color: var(--blue); text-transform: uppercase; letter-spacing:.16em; font-weight: 900; font-size: 14px; margin-bottom: 8px; }
+.slide-title h2 { margin:0; font-size: clamp(34px, 4vw, 64px); line-height: .95; letter-spacing:-.04em; }
+.slide-title p { margin: 14px 0 0; color: var(--muted); font-size: 18px; max-width: 1020px; }
+.metric-grid { display:grid; grid-template-columns: repeat(5, 1fr); gap:18px; margin-bottom:24px; }
+.metric-card, .chart-card, .insight-card, .method-card, .timeline-panel, .ranking-note { background: rgba(255,253,248,.94); border: 2px solid rgba(17,24,39,.72); border-radius: 28px; box-shadow: 9px 9px 0 rgba(17,24,39,.12); overflow:hidden; }
+.metric-card { min-height:150px; padding:24px; position:relative; }
+.metric-icon { display:inline-flex; min-width:48px; height:38px; align-items:center; justify-content:center; border:1px solid rgba(17,24,39,.18); border-radius:20px; background:#f8fafc; font-weight:900; }
+.metric-value { font-size: 48px; font-weight: 900; line-height:1; margin-top:20px; }
+.metric-label { margin-top:12px; color:#475569; font-weight:700; }
+.exec-grid { display:grid; grid-template-columns: 1.2fr 1.05fr .72fr; gap:22px; }
+.chart-head { display:grid; grid-template-columns:56px 1fr; gap:16px; padding:20px 22px 14px; border-bottom: 1px solid var(--line); }
+.chart-num { display:flex; align-items:center; justify-content:center; width:46px; height:46px; border:1.8px solid var(--ink); border-radius:16px; font-weight:900; background:#fff; }
+.chart-title { font-size:20px; font-weight:900; }
+.chart-subtitle { margin-top:6px; color:var(--muted); }
+.chart-body { padding: 10px 18px 18px; min-height: 360px; }
+.insight-card { padding:28px; min-height: 520px; }
+.insight-kicker { color:var(--blue); text-transform:uppercase; letter-spacing:.14em; font-weight:900; margin-bottom:18px; }
+.insight-card h3 { font-size:30px; line-height:1.1; margin:0 0 16px; }
+.insight-card p { color:var(--muted); font-size:17px; line-height:1.55; }
+.three-panel-grid { display:grid; grid-template-columns: 1.05fr 1fr .86fr; gap:24px; }
+.flow-layout { display:grid; grid-template-columns: 1.35fr .9fr; gap:24px; }
+.flow-side { display:grid; gap:24px; }
+.ranking-grid { display:grid; grid-template-columns: 1fr 1fr; gap:24px; }
+.ranking-note { grid-column: 1 / -1; padding:22px 28px; color:#475569; }
+.ranking-note h3 { margin:0 0 6px; color:var(--ink); }
+.crisis-layout { display:grid; grid-template-columns: .72fr 1.05fr 1fr 1fr; gap:22px; }
+.timeline-panel { padding:26px; }
+.timeline-row { display:grid; grid-template-columns: 64px 1fr; gap: 12px; border-top:1px solid rgba(17,24,39,.12); padding:14px 0; }
+.timeline-year { font-weight:900; }
+.appendix-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:22px; }
+.method-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; }
+.method-card { padding:30px; min-height:360px; }
+.quality-row { display:flex; justify-content:space-between; padding:13px 0; border-bottom:1px solid rgba(17,24,39,.12); }
+@media (max-width: 1200px) { .filter-row, .metric-grid, .exec-grid, .three-panel-grid, .flow-layout, .ranking-grid, .crisis-layout, .appendix-grid, .method-grid { grid-template-columns: 1fr; } .year-badge { display:none; } .slide-dots { display:none; } }
+
+.slide-dots a.active { background: var(--ink); color: #fff; transform: scale(1.08); }
+
+/* ================================================================
+   SHINY_.PY VISUAL TECHNIQUE INTEGRATION
+   Curved routes, moving-group markers, dynamic map focus, and
+   animated host map. Data remains sourced from cleaned EDA outputs.
+   ================================================================ */
+
+.chart-card.flow-main .chart-body {
+  min-height: 610px !important;
+  height: 610px !important;
+  padding: 6px 16px 16px !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.chart-card.flow-main .chart-body > div,
+.chart-card.flow-main .chart-body .shiny-bound-output,
+.chart-card.flow-main .chart-body .html-fill-container,
+.chart-card.flow-main .chart-body .js-plotly-plot {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 600px !important;
+}
+
+.chart-card.crisis-card .chart-body {
+  min-height: 440px !important;
+  height: 440px !important;
+  padding: 6px 14px 16px !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.chart-card.crisis-card .chart-body > div,
+.chart-card.crisis-card .chart-body .shiny-bound-output,
+.chart-card.crisis-card .chart-body .html-fill-container,
+.chart-card.crisis-card .chart-body .js-plotly-plot {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 430px !important;
+}
+
+.chart-card:has(#host_map_large) .chart-body {
+  height: 630px !important;
+  min-height: 630px !important;
+  padding: 4px 12px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#host_map_large,
+#host_map_large > div,
+#host_map_large .html-fill-container,
+#host_map_large .js-plotly-plot,
+#animated_host_map_plot,
+#animated_host_map_plot > div,
+#animated_host_map_plot .html-fill-container,
+#animated_host_map_plot .js-plotly-plot {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#flow_map .updatemenu-container,
+#crisis_routes .updatemenu-container {
+  display: none !important;
+}
+
+.chart-card .modebar-container,
+.chart-card .modebar {
+  opacity: 0.08 !important;
+  transition: opacity .16s ease !important;
+}
+
+.chart-card:hover .modebar-container,
+.chart-card:hover .modebar {
+  opacity: 0.52 !important;
+}
+
+.moving-people-active {
+  filter: saturate(1.08) contrast(1.02);
+}
+
+@media (max-width: 1200px) {
+  .chart-card.flow-main .chart-body,
+  .chart-card.flow-main .chart-body .html-fill-container,
+  .chart-card.flow-main .chart-body .js-plotly-plot {
+    height: 520px !important;
+    min-height: 520px !important;
+  }
+}
+
+/* ================================================================
+   FEEDBACK-DRIVEN STORY LAYOUT PATCH
+   Rules: one row has one visual plus one explanatory text block; avoid
+   three visualisations in one row. Most rows use a 2:1 visual:text ratio.
+   ================================================================ */
+
+.institution-tag {
+  margin: 0 0 6px 0;
+  color: #b91c1c;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.cover-slide {
+  min-height: calc(100vh - 28px);
+  display: flex;
+  align-items: center;
+}
+
+.cover-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, .9fr) minmax(520px, 1.2fr);
+  gap: 34px;
+  align-items: center;
+  max-width: 1760px;
+  margin: 0 auto;
+}
+
+.cover-copy {
+  padding: 36px 16px 36px 8px;
+}
+
+.cover-kicker {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.cover-copy h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: clamp(58px, 6.6vw, 118px);
+  line-height: .84;
+  letter-spacing: -.045em;
+}
+
+.cover-copy h2 {
+  margin: 14px 0 0;
+  font-size: clamp(30px, 3.2vw, 56px);
+  line-height: .95;
+  color: var(--blue);
+}
+
+.cover-copy p {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.55;
+  max-width: 760px;
+}
+
+.cover-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.cover-tags span {
+  border: 1.5px solid rgba(17,24,39,.35);
+  background: rgba(255,255,255,.7);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.cover-art-card {
+  border: 2px solid rgba(17,24,39,.76);
+  border-radius: 32px;
+  background: rgba(255,253,248,.92);
+  box-shadow: 12px 12px 0 rgba(17,24,39,.12);
+  padding: 18px;
+}
+
+.cover-sketch {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sketch-route {
+  stroke-width: 8;
+  opacity: .84;
+  stroke-dasharray: 16 9;
+  animation: sketch-dash 5.5s linear infinite;
+}
+
+.route-blue { stroke: var(--blue); }
+.route-orange { stroke: var(--orange); animation-delay: -1.2s; }
+.route-purple { stroke: var(--purple); animation-delay: -2.3s; }
+.route-green { stroke: var(--green); animation-delay: -3.1s; }
+
+.sketch-label text {
+  font-weight: 900;
+  font-size: 34px;
+  fill: var(--ink);
+  letter-spacing: .06em;
+}
+.sketch-label .small { font-size: 18px; fill: var(--muted); letter-spacing: .03em; }
+.sketch-label .tiny { font-size: 15px; fill: var(--muted); letter-spacing: .02em; }
+
+@keyframes sketch-dash {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -120; }
+}
+
+.story-stack {
+  display: grid;
+  gap: 30px;
+}
+
+.story-row,
+.story-row.reverse {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(310px, .86fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.story-row.reverse {
+  grid-template-columns: minmax(310px, .86fr) minmax(0, 2fr);
+}
+
+.story-row > .chart-card,
+.story-row.reverse > .chart-card {
+  min-width: 0;
+}
+
+.explain-card {
+  background: rgba(255,253,248,.94);
+  border: 2px solid rgba(17,24,39,.72);
+  border-radius: 28px;
+  box-shadow: 9px 9px 0 rgba(17,24,39,.12);
+  padding: 30px;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.explain-kicker {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-weight: 900;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.explain-card h3 {
+  margin: 0 0 14px;
+  font-size: clamp(24px, 2vw, 36px);
+  line-height: 1.05;
+}
+
+.explain-card p,
+.explain-card li {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.explain-card ul {
+  margin: 16px 0 0 20px;
+  padding: 0;
+}
+
+.story-visual .chart-body {
+  min-height: 500px;
+}
+
+.story-visual.compact .chart-body {
+  min-height: 430px;
+}
+
+.story-visual.tall-map .chart-body {
+  min-height: 620px;
+  height: 620px;
+}
+
+.rank-card .chart-body {
+  min-height: 570px;
+}
+
+.flow-main .chart-body {
+  min-height: 630px !important;
+  height: 630px !important;
+}
+
+.scenario-controls {
+  display: grid;
+  grid-template-columns: 1.15fr .9fr .7fr 1.1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.scenario-control {
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(17,24,39,.22);
+  border-radius: 18px;
+  padding: 12px 14px;
+  box-shadow: 0 5px 0 rgba(17,24,39,.08);
+}
+
+.scenario-control label {
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--ink);
+}
+
+.timeline-panel.explain-card {
+  min-height: 430px;
+}
+
+.timeline-panel h3 {
+  font-size: 30px;
+  margin: 0 0 12px;
+}
+
+/* Keep old multi-panel grids from compressing visuals if old classes remain. */
+.exec-grid,
+.three-panel-grid,
+.flow-layout,
+.ranking-grid,
+.crisis-layout,
+.appendix-grid,
+.method-grid {
+  grid-template-columns: 1fr !important;
+}
+
+@media (max-width: 1350px) {
+  .story-row,
+  .story-row.reverse,
+  .cover-layout,
+  .scenario-controls {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cover-copy h1 {
+    font-size: clamp(48px, 10vw, 86px);
+  }
+}
+
+/* ================================================================
+   CORE STORY CLEANUP PATCH
+   Removes the visual pressure from bonus sections and improves the
+   core 2:1 visual-to-text rhythm.
+   ================================================================ */
+
+.story-row {
+  grid-template-columns: minmax(0, 2fr) minmax(280px, .72fr) !important;
+  gap: 28px !important;
+  align-items: stretch !important;
+}
+
+.story-row.reverse {
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 2fr) !important;
+}
+
+.story-visual .chart-body {
+  min-height: 500px;
+}
+
+.story-visual.compact .chart-body {
+  min-height: 420px;
+}
+
+.story-visual.rank-card .chart-body {
+  min-height: 520px;
+}
+
+.story-visual.flow-main .chart-body {
+  min-height: 620px !important;
+}
+
+.explain-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.explain-card h3 {
+  line-height: 1.05;
+}
+
+.cover-copy p {
+  max-width: 850px;
+}
+
+.cover-tags span {
+  white-space: nowrap;
+}
+
+@media (max-width: 1150px) {
+  .story-row,
+  .story-row.reverse {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ================================================================
+   VINUNI LOGO + HEADER PROFESSIONAL FIX
+   Fixes oversized VinUni wordmark, header overflow, cover scale,
+   and slide-dot overlap.
+   ================================================================ */
+
+/* Keep entire page from horizontal overflow */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+/* Header should not allow logo image to spill outside */
+.brand-row {
+  grid-template-columns: 96px minmax(0, 1fr) 158px !important;
+  gap: 20px !important;
+  align-items: center !important;
+}
+
+.brand-icon {
+  width: 78px !important;
+  height: 78px !important;
+  min-width: 78px !important;
+  max-width: 78px !important;
+  border-radius: 22px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #fffdf8 !important;
+  isolation: isolate !important;
+}
+
+/* Critical fix:
+   If the logo file is a wide VinUni wordmark, crop the left emblem
+   into the square brand box instead of letting text spill out. */
+.brand-icon img,
+.brand-icon .vinuni-logo-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: left center !important;
+  transform: scale(1.04) !important;
+  display: block !important;
+}
+
+/* Hide old SVG globe if both SVG and img exist */
+.brand-icon .globe-icon {
+  display: none !important;
+}
+
+.institution-tag {
+  margin: 0 0 6px 0 !important;
+  color: #b91c1c !important;
+  font-weight: 900 !important;
+  font-size: 12px !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+.brand-copy {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+.brand-copy h1 {
+  font-size: clamp(44px, 5.2vw, 76px) !important;
+  line-height: .88 !important;
+  letter-spacing: .035em !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.brand-copy p {
+  font-size: 15.5px !important;
+  line-height: 1.25 !important;
+  max-width: 980px !important;
+}
+
+.year-badge {
+  min-width: 138px !important;
+  padding: 15px 20px !important;
+}
+
+.year-badge strong {
+  font-size: 30px !important;
+}
+
+/* Prevent filter row from going under the slide dots */
+.command-bar {
+  padding-right: 96px !important;
+  overflow: hidden !important;
+}
+
+.filter-row {
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+.control {
+  min-width: 0 !important;
+}
+
+.control .shiny-input-container,
+.control .selectize-control,
+.control .selectize-input {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Put slide dots in the middle-right, not on top of filters */
+.slide-dots {
+  position: fixed !important;
+  top: 56% !important;
+  right: 16px !important;
+  transform: translateY(-50%) !important;
+  z-index: 70 !important;
+}
+
+.slide-dots a {
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 11px !important;
+}
+
+/* Cover slide: make typography less likely to be clipped */
+.cover-layout {
+  grid-template-columns: minmax(0, .95fr) minmax(420px, .95fr) !important;
+  gap: 44px !important;
+  align-items: center !important;
+}
+
+.cover-copy h1 {
+  font-size: clamp(64px, 8vw, 118px) !important;
+  line-height: .88 !important;
+  letter-spacing: -.025em !important;
+}
+
+.cover-copy h2 {
+  font-size: clamp(34px, 4.4vw, 66px) !important;
+  line-height: 1 !important;
+}
+
+.cover-copy p {
+  max-width: 760px !important;
+}
+
+.cover-art-card {
+  max-height: 540px !important;
+  overflow: hidden !important;
+}
+
+.cover-sketch {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 520px !important;
+}
+
+/* Laptop / smaller screen fallback */
+@media (max-width: 1500px) {
+  .brand-row {
+    grid-template-columns: 84px minmax(0, 1fr) 136px !important;
+  }
+
+  .brand-icon {
+    width: 68px !important;
+    height: 68px !important;
+    min-width: 68px !important;
+    max-width: 68px !important;
+  }
+
+  .brand-copy h1 {
+    font-size: clamp(38px, 4.8vw, 62px) !important;
+  }
+
+  .brand-copy p {
+    font-size: 14px !important;
+  }
+
+  .command-bar {
+    padding-right: 28px !important;
+  }
+
+  .slide-dots {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .cover-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .brand-row {
+    grid-template-columns: 70px minmax(0, 1fr) !important;
+  }
+
+  .year-badge {
+    display: none !important;
+  }
+}
