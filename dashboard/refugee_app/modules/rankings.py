@@ -33,13 +33,13 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
     @output
     @render_widget
     def graph5_plot():
-        d = aggregate_dimension(state.selected_stock(), "origin", int(input.top_n()))
+        d = aggregate_dimension(state.selected_stock(), "origin", state.top_n())
         return ranking_bar(d, "origin_country_std", ORANGE, "Graph 5")
 
     @output
     @render_widget
     def graph6_plot():
-        d = aggregate_dimension(state.selected_stock(), "host", int(input.top_n()))
+        d = aggregate_dimension(state.selected_stock(), "host", state.top_n())
         return ranking_bar(d, "host_country_std", GREEN, "Graph 6")
 
     @output

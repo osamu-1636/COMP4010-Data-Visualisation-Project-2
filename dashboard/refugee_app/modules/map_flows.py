@@ -373,7 +373,7 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
             return empty_fig("Role matrix not available", 620)
 
         if "year" in d.columns:
-            d = d[d["year"].eq(int(input.year()))]
+            d = d[d["year"].eq(state.year())]
 
         if d.empty:
             return empty_fig("Role matrix not available for selected year", 620)
@@ -415,7 +415,7 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
             )
             xcol, ycol = "host_stock_observed", "host_country_std"
         else:
-            hp = hp[hp["year"].eq(int(input.year()))] if "year" in hp.columns else hp
+            hp = hp[hp["year"].eq(state.year())] if "year" in hp.columns else hp
 
             metric_candidates = [
                 "host_stock_per_100k_population",
@@ -458,11 +458,11 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
     @output
     @render_widget
     def flow_map():
-        corridors = build_corridors(state.selected_stock(), int(input.top_n()))
+        corridors = build_corridors(state.selected_stock(), state.top_n())
         return make_route_map_figure(
             corridors,
             height=600,
-            max_routes=int(input.top_n()),
+            max_routes=state.top_n(),
             route_color=BLUE,
             moving=True,
         )
@@ -470,7 +470,7 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
     @output
     @render_widget
     def network_plot():
-        corridors = build_corridors(state.selected_stock(), int(input.top_n()))
+        corridors = build_corridors(state.selected_stock(), state.top_n())
 
         if corridors.empty:
             return empty_fig("No network data for this selection", 315)

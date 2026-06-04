@@ -1,8 +1,9 @@
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
-if (!(Test-Path ".venv")) { py -m venv .venv }
+$VenvPath = "C:\venvs\comp4010-dashboard"
+if (!(Test-Path $VenvPath)) { py -m venv $VenvPath }
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-. .\.venv\Scripts\Activate.ps1
+. "$VenvPath\Scripts\Activate.ps1"
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python tests\test_smoke.py

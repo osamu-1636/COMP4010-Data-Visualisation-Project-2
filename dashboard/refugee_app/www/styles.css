@@ -673,11 +673,6 @@ html, body {
   line-height: 1.35 !important;
 }
 
-.cover-slide {
-  min-height: calc(100vh - 148px) !important;
-  padding-top: 42px !important;
-}
-
 .cover-layout {
   display: grid !important;
   grid-template-columns: minmax(0, .92fr) minmax(420px, 1.08fr) !important;
@@ -843,4 +838,326 @@ html, body {
 @media (max-width: 760px) {
   .filter-row { grid-template-columns: 1fr !important; }
   .brand-copy p { display: none !important; }
+}
+
+/* ================================================================
+   SCROLLYTELLING SCENE MODE
+   One chapter occupies the viewport. Unreached chapters stay visually
+   withheld; completed chapters fade away as the next chapter takes over.
+   ================================================================ */
+
+html,
+body {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-container {
+  scroll-snap-type: y mandatory !important;
+}
+
+.story-slide {
+  position: relative !important;
+  height: auto !important;
+  min-height: calc(100vh - 148px) !important;
+  max-height: none !important;
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always !important;
+  overflow: clip !important;
+  display: flex !important;
+  align-items: center !important;
+  isolation: isolate !important;
+  transition: opacity .42s ease, filter .42s ease, transform .42s ease;
+}
+
+.story-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(247,241,232,0) 0%, rgba(247,241,232,.78) 100%),
+    radial-gradient(circle at 15% 20%, rgba(47,102,197,.08), transparent 32%),
+    radial-gradient(circle at 86% 70%, rgba(223,122,38,.10), transparent 28%);
+  opacity: 0;
+  transition: opacity .42s ease;
+  z-index: -1;
+}
+
+.story-slide.is-active::before {
+  opacity: 1;
+}
+
+.story-slide.is-past {
+  opacity: .08;
+  filter: blur(8px) saturate(.5);
+  transform: translateY(-42px) scale(.985);
+  pointer-events: none;
+}
+
+.story-slide.is-future {
+  opacity: .04;
+  filter: blur(10px) saturate(.45);
+  transform: translateY(54px) scale(.985);
+  pointer-events: none;
+}
+
+.story-slide.is-active {
+  opacity: 1;
+  filter: none;
+  transform: none;
+  pointer-events: auto;
+}
+
+.story-slide .slide-inner {
+  width: 100% !important;
+  max-height: none !important;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr) !important;
+  gap: 18px !important;
+  opacity: .34;
+  transform: translateY(22px);
+  transition: opacity .46s ease, transform .46s ease;
+}
+
+.story-slide.is-active .slide-inner,
+.story-slide:not(.is-past):not(.is-future) .slide-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-stack {
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.story-row {
+  min-height: 0 !important;
+}
+
+.story-row:first-child {
+  height: 100% !important;
+}
+
+.metric-grid {
+  margin-bottom: 18px !important;
+}
+
+.chart-card,
+.explain-card,
+.method-card,
+.cover-art-card {
+  max-height: none !important;
+}
+
+.chart-body,
+.story-visual .chart-body,
+.story-visual.compact .chart-body {
+  height: clamp(500px, 58vh, 680px) !important;
+  min-height: clamp(500px, 58vh, 680px) !important;
+}
+
+.story-visual.compact .chart-body {
+  height: clamp(460px, 54vh, 600px) !important;
+  min-height: clamp(460px, 54vh, 600px) !important;
+}
+
+.story-visual.rank-card .chart-body {
+  height: clamp(570px, 64vh, 720px) !important;
+  min-height: clamp(570px, 64vh, 720px) !important;
+}
+
+.story-visual.flow-main .chart-body,
+.chart-card.flow-main .chart-body,
+#slide-flow .chart-body,
+#slide-space-map .chart-body,
+.story-visual.tall-map .chart-body {
+  height: clamp(620px, 68vh, 760px) !important;
+  min-height: clamp(620px, 68vh, 760px) !important;
+}
+
+.cover-slide .slide-inner {
+  display: block !important;
+}
+
+.dataset-intro {
+  display: grid;
+  gap: 20px;
+}
+
+.dataset-metric-grid {
+  margin-bottom: 0 !important;
+}
+
+.dataset-metric-grid .metric-card {
+  min-height: 132px !important;
+  padding: 18px !important;
+}
+
+.dataset-metric-grid .metric-value {
+  margin-top: 14px !important;
+  font-size: 40px !important;
+}
+
+.dataset-intro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dataset-card {
+  min-height: 168px;
+  padding: 22px;
+  background: rgba(255,253,248,.94);
+  border: 2px solid rgba(17,24,39,.72);
+  border-radius: 8px;
+  box-shadow: 8px 8px 0 rgba(17,24,39,.10);
+}
+
+.dataset-kicker {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.dataset-card h3 {
+  margin: 12px 0 10px;
+  font-size: clamp(21px, 1.6vw, 28px);
+}
+
+.dataset-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.dataset-stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.dataset-stat-row > div {
+  padding: 20px 24px;
+  border-right: 1px solid var(--line);
+}
+
+.dataset-stat-row > div:last-child {
+  border-right: 0;
+}
+
+.dataset-stat-value {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.dataset-stat-label {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 700;
+}
+
+/* Filters update the expensive charts only after Apply is clicked. */
+.filter-row {
+  grid-template-columns:
+    minmax(180px, 1.1fr)
+    minmax(150px, .8fr)
+    minmax(160px, .9fr)
+    minmax(170px, .95fr)
+    minmax(180px, 1fr)
+    minmax(100px, .48fr)
+    minmax(88px, .38fr)
+    minmax(88px, .38fr) !important;
+}
+
+.action-control {
+  align-self: stretch !important;
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  padding: 8px !important;
+  overflow: hidden !important;
+}
+
+.action-control .shiny-input-container,
+.action-control .form-group {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.apply-btn,
+.reset-btn {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 40px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 10px !important;
+  border-radius: 15px !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+
+.apply-btn {
+  border: 0 !important;
+  background: var(--blue) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 1400px) {
+  .filter-row {
+    grid-template-columns: repeat(4, minmax(150px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 1150px) {
+  .filter-row {
+    grid-template-columns: repeat(3, minmax(160px, 1fr)) !important;
+  }
+
+  .story-slide {
+    height: auto !important;
+    max-height: none !important;
+    min-height: calc(100vh - 148px) !important;
+    overflow: visible !important;
+    align-items: flex-start !important;
+  }
+
+  .dataset-intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dataset-stat-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dataset-stat-row > div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .dataset-stat-row > div:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .filter-row {
+    grid-template-columns: 1fr !important;
+  }
 }

@@ -21,7 +21,7 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
     @output
     @render.ui
     def crisis_timeline():
-        crisis = input.crisis() if input.crisis() != "All Crises" else "Syrian Civil War"
+        crisis = state.crisis() if state.crisis() != "All Crises" else "Syrian Civil War"
 
         rows = [
             ui.h3(crisis),
@@ -42,7 +42,7 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
     @output
     @render_widget
     def crisis_trend():
-        origin = crisis_origin(input.crisis())
+        origin = crisis_origin(state.crisis())
         d = data.time_series.copy()
         d = d[d["origin_country_std"].eq(origin) & d["population_type_std"].isin(state.types())]
 
@@ -76,11 +76,11 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
     @output
     @render_widget
     def crisis_hosts():
-        origin = crisis_origin(input.crisis())
+        origin = crisis_origin(state.crisis())
         d = state.selected_stock()
         d = d[d["origin_country_std"].eq(origin)]
 
-        out = aggregate_dimension(d, "host", int(input.top_n()))
+        out = aggregate_dimension(d, "host", state.top_n())
 
         if out.empty:
             return empty_fig("No crisis host ranking", 430)
@@ -103,7 +103,7 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
     @output
     @render_widget
     def crisis_routes():
-        origin = crisis_origin(input.crisis())
+        origin = crisis_origin(state.crisis())
         d = state.selected_stock()
         d = d[d["origin_country_std"].eq(origin)]
 
@@ -114,13 +114,13 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
             d.groupby(["origin_country_std", "host_country_std"], as_index=False)
             .agg(value_observed=("value_observed", "sum"))
             .sort_values("value_observed", ascending=False)
-            .head(int(input.top_n()))
+            .head(state.top_n())
         )
 
         return make_route_map_figure(
             routes,
             height=430,
-            max_routes=int(input.top_n()),
+            max_routes=state.top_n(),
             route_color=BLUE,
             moving=True,
         )

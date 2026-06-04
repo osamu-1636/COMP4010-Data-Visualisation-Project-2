@@ -235,7 +235,7 @@ def section_spatial() -> ui.Tag:
 
 def section_flow() -> ui.Tag:
     return ui_slide(
-        "03",
+        "04",
         "Movement structure",
         "How origin-host corridors organize displacement",
         "The flow map is the main corridor visual. It receives its own row so route patterns remain readable.",
@@ -339,4 +339,262 @@ def section_method() -> ui.Tag:
             class_="story-stack",
         ),
         "slide-method",
+    )
+
+
+def section_dataset_intro() -> ui.Tag:
+    return ui_slide(
+        "01",
+        "Dataset introduction",
+        "What does this dashboard measure?",
+        "The story combines cleaned UNHCR-style population stocks and movement-flow tables to explain the scale, geography and structure of forced migration.",
+        ui.div(
+            ui.div(
+                metric_card("kpi_cross_border", "Cross-border scope", "CB", BLUE),
+                metric_card("kpi_refugees", "Refugees", "R", GREEN),
+                metric_card("kpi_idps", "Internally displaced", "IDP", ORANGE),
+                metric_card("kpi_asylum", "Asylum-seekers", "A", PURPLE),
+                metric_card("kpi_countries", "Countries and territories", "G", BLUE),
+                class_="metric-grid dataset-metric-grid",
+            ),
+            ui.div(
+                ui.div(
+                    ui.div("Population stock", class_="dataset-kicker"),
+                    ui.h3("Who is displaced?"),
+                    ui.p("Annual observations cover refugees, asylum-seekers, internally displaced people and other populations of concern."),
+                    class_="dataset-card",
+                ),
+                ui.div(
+                    ui.div("Geography", class_="dataset-kicker"),
+                    ui.h3("Where do people move?"),
+                    ui.p("Standardized origin and host countries connect displacement totals to maps, rankings and origin-host corridors."),
+                    class_="dataset-card",
+                ),
+                ui.div(
+                    ui.div("Time", class_="dataset-kicker"),
+                    ui.h3("How does displacement change?"),
+                    ui.p("Annual and monthly records reveal long-term trends, crisis spikes and changes in hosting patterns."),
+                    class_="dataset-card",
+                ),
+                ui.div(
+                    ui.div("Evidence", class_="dataset-kicker"),
+                    ui.h3("How is quality protected?"),
+                    ui.p("The dashboard reads cleaned, audited and chart-ready outputs rather than processing raw files during interaction."),
+                    class_="dataset-card",
+                ),
+                class_="dataset-intro-grid",
+            ),
+            class_="dataset-intro",
+        ),
+        "slide-dataset",
+    )
+
+
+def section_scale() -> ui.Tag:
+    return ui_slide(
+        "02",
+        "Trend visualization",
+        "How has forced migration changed over time?",
+        "This standalone visualization reveals long-term growth, crisis spikes and changes across population types.",
+        ui.div(
+            story_row(
+                chart_card("2", "Displacement trend", "Observed population stock by year and population type", "trend_plot", "story-visual"),
+                explain_card(
+                    "Reading guide",
+                    "Why begin with time?",
+                    "The line chart shows whether the selected year belongs to a long-term increase, a crisis spike or a post-crisis plateau.",
+                    ["Use the top filters to isolate scope and crisis.", "The selected year controls maps and rankings."],
+                ),
+            ),
+            class_="story-stack",
+        ),
+        "slide-scale",
+    )
+
+
+def section_host_snapshot() -> ui.Tag:
+    return ui_slide(
+        "03",
+        "Executive overview",
+        "Then locate the selected year",
+        "The same filters now turn the global trend into a geographic hosting snapshot.",
+        ui.div(
+            story_row(
+                chart_card("3", "Host geography", "Host countries by observed stock for the selected year", "host_map", "story-visual tall-map"),
+                ui.div(ui.output_ui("executive_insight"), class_="explain-card"),
+                reverse=True,
+            ),
+            class_="story-stack",
+        ),
+        "slide-host-snapshot",
+    )
+
+
+def section_host_map_scene() -> ui.Tag:
+    return ui_slide(
+        "05",
+        "Spatial view",
+        "Where is hosting concentrated?",
+        "This scene gives the host-country map enough space to be read as geography, not decoration.",
+        ui.div(
+            story_row(
+                chart_card("3A", "Host-country choropleth", "Map-eligible host countries; values are observed people", "host_map_large", "story-visual tall-map"),
+                explain_card(
+                    "Map purpose",
+                    "Absolute hosting geography",
+                    "The choropleth identifies where the selected displaced population is hosted. It is useful for concentration and regional-burden analysis.",
+                    ["Values are observed people, not imputed totals.", "Map-eligible entities only are shown."],
+                ),
+            ),
+            class_="story-stack",
+        ),
+        "slide-space-map",
+    )
+
+
+def section_pressure_scene() -> ui.Tag:
+    return ui_slide(
+        "06",
+        "Spatial view",
+        "Burden is not only raw totals",
+        "A smaller host country can face greater proportional pressure than a larger country with a higher absolute stock.",
+        ui.div(
+            story_row(
+                chart_card("3B", "Host burden ranking", "Host stock or per-capita pressure when available", "host_pressure_plot", "story-visual"),
+                explain_card(
+                    "Pressure reading",
+                    "Compare scale with pressure",
+                    "This chart supports the hosting-pressure research question by separating absolute stock from proportional burden.",
+                ),
+                reverse=True,
+            ),
+            class_="story-stack",
+        ),
+        "slide-pressure",
+    )
+
+
+def section_origin_rank_scene() -> ui.Tag:
+    return ui_slide(
+        "07",
+        "Country rankings",
+        "Where does displacement originate?",
+        "Graph 5 identifies the countries that account for the largest selected displaced population stock.",
+        ui.div(
+            story_row(
+                chart_card("5", "Top origin countries", "Countries producing the largest selected displaced populations", "graph5_plot", "story-visual rank-card"),
+                explain_card(
+                    "Research question 1",
+                    "Ranked bars reveal concentration",
+                    "The distribution is highly skewed, so a ranked bar chart is clearer than a pie chart for comparing origin countries.",
+                ),
+            ),
+            class_="story-stack",
+        ),
+        "slide-origin-rank",
+    )
+
+
+def section_host_rank_scene() -> ui.Tag:
+    return ui_slide(
+        "08",
+        "Country rankings",
+        "Which countries host the largest populations?",
+        "Graph 6 answers the host-country side of the core research question.",
+        ui.div(
+            story_row(
+                chart_card("6", "Top host countries", "Countries hosting the largest selected displaced populations", "graph6_plot", "story-visual rank-card"),
+                ui.div(ui.output_ui("ranking_note"), class_="explain-card"),
+                reverse=True,
+            ),
+            class_="story-stack",
+        ),
+        "slide-host-rank",
+    )
+
+
+def section_crisis_routes_scene() -> ui.Tag:
+    return ui_slide(
+        "09",
+        "Crisis case study",
+        "Follow one crisis through its main routes",
+        "The crisis route map focuses the story on destinations connected to the selected crisis origin.",
+        ui.div(
+            story_row(
+                chart_card("7A", "Main migration routes", "Top host destinations from the selected crisis origin", "crisis_routes", "story-visual"),
+                ui.div(ui.output_ui("crisis_timeline"), class_="timeline-panel explain-card"),
+            ),
+            class_="story-stack",
+        ),
+        "slide-crisis-routes",
+    )
+
+
+def section_crisis_hosts_scene() -> ui.Tag:
+    return ui_slide(
+        "10",
+        "Crisis case study",
+        "Then compare the top crisis hosts",
+        "The ranking clarifies whether displacement remains regional or extends toward more distant host countries.",
+        ui.div(
+            story_row(
+                chart_card("7B", "Top crisis host countries", "Ranked host destinations for the selected crisis and year", "crisis_hosts", "story-visual compact"),
+                explain_card(
+                    "Host concentration",
+                    "Regional neighbours often absorb the first burden",
+                    "Use this scene after the route map to compare host destinations without the geographic clutter.",
+                ),
+                reverse=True,
+            ),
+            class_="story-stack",
+        ),
+        "slide-crisis-hosts",
+    )
+
+
+def section_method_pipeline_scene() -> ui.Tag:
+    return ui_slide(
+        "11",
+        "Method and reproducibility",
+        "Why the dashboard is defensible",
+        "The app reads cleaned and chart-ready data only, with raw CSV processing handled upstream.",
+        ui.div(
+            story_row(
+                ui.div(ui.output_ui("method_cards"), class_="method-card"),
+                explain_card(
+                    "Pipeline",
+                    "A reproducible data handoff",
+                    "Preprocessing and EDA create stable chart-ready data for the dashboard, so the app itself is focused on interaction and storytelling.",
+                ),
+            ),
+            class_="story-stack",
+        ),
+        "slide-method-pipeline",
+    )
+
+
+def section_quality_scene() -> ui.Tag:
+    return ui_slide(
+        "12",
+        "Method and reproducibility",
+        "Quality checks close the story",
+        "The final scene documents the pipeline handoff and data-quality evidence behind the dashboard.",
+        ui.div(
+            story_row(
+                ui.div(ui.output_ui("quality_cards"), class_="method-card"),
+                ui.div(
+                    ui.h3("Pipeline handoff"),
+                    ui.tags.ol(
+                        ui.tags.li("Six raw UNHCR-style CSV files are cleaned by 01_preprocessing.py."),
+                        ui.tags.li("02_eda.py creates chart-ready tables in outputs/03_chart_data."),
+                        ui.tags.li("app.py renders interactive views from cleaned/chart-ready data only."),
+                        ui.tags.li("Graph 5/6 use population-stock data; asylum files remain flow datasets."),
+                    ),
+                    class_="explain-card",
+                ),
+                reverse=True,
+            ),
+            class_="story-stack",
+        ),
+        "slide-quality",
     )

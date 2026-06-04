@@ -49,9 +49,9 @@ The package uses `refugee_app/` rather than `app/` to avoid Python import ambigu
 
 ```powershell
 cd "D:\refugee_dashboard_modular_10_10"
-py -m venv .venv
+py -m venv C:\venvs\comp4010-dashboard
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
+C:\venvs\comp4010-dashboard\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python tests\test_smoke.py

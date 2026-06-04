@@ -15,17 +15,32 @@
     }
   }
 
+  function syncCommandBarHeight() {
+    const commandBar = document.querySelector(".command-bar");
+    const height = commandBar ? Math.ceil(commandBar.getBoundingClientRect().height) : 148;
+    document.documentElement.style.setProperty("--command-bar-height", `${height}px`);
+  }
+
+  function observeCommandBarHeight() {
+    const commandBar = document.querySelector(".command-bar");
+    if (!commandBar || !window.ResizeObserver) return;
+
+    const observer = new ResizeObserver(syncCommandBarHeight);
+    observer.observe(commandBar);
+  }
+
   function setActiveDot() {
     const sections = Array.from(document.querySelectorAll(".story-slide"));
     const dots = Array.from(document.querySelectorAll(".slide-dots a"));
 
-    if (!sections.length || !dots.length) return;
+    if (!sections.length) return;
 
     let active = 0;
     let best = Infinity;
 
     sections.forEach((section, index) => {
-      const dist = Math.abs(section.getBoundingClientRect().top - 160);
+      const rect = section.getBoundingClientRect();
+      const dist = Math.abs(rect.top + rect.height * 0.45 - window.innerHeight * 0.5);
       if (dist < best) {
         best = dist;
         active = index;
@@ -34,6 +49,12 @@
 
     dots.forEach((dot, index) => {
       dot.classList.toggle("active", index === active);
+    });
+
+    sections.forEach((section, index) => {
+      section.classList.toggle("is-active", index === active);
+      section.classList.toggle("is-past", index < active);
+      section.classList.toggle("is-future", index > active);
     });
   }
 
@@ -227,8 +248,14 @@
   }
 
   window.addEventListener("scroll", setActiveDot, { passive: true });
+  window.addEventListener("resize", () => {
+    syncCommandBarHeight();
+    setActiveDot();
+  }, { passive: true });
 
   window.addEventListener("load", () => {
+    syncCommandBarHeight();
+    observeCommandBarHeight();
     setActiveDot();
     installObserver();
 

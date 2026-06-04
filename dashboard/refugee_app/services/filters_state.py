@@ -82,12 +82,41 @@ def build_corridors(d: pd.DataFrame, top_n: int) -> pd.DataFrame:
 @dataclass
 class DashboardState:
     types: Callable[[], list[str]]
+    year: Callable[[], int]
+    top_n: Callable[[], int]
+    crisis: Callable[[], str]
     selected_stock: Callable[[], pd.DataFrame]
     stock_all_years_same_filters: Callable[[], pd.DataFrame]
     kpis: Callable[[], dict]
 
 
 def make_state(input: Inputs, session: Session, data: DataStore) -> DashboardState:
+    applied = reactive.value(
+        {
+            "year": data.year_max,
+            "crisis": "All Crises",
+            "origin": "All",
+            "host": "All",
+            "refugee_type": "All cross-border",
+            "top_n": 30,
+        }
+    )
+
+    def current_inputs() -> dict:
+        return {
+            "year": int(input.year()),
+            "crisis": input.crisis(),
+            "origin": input.origin(),
+            "host": input.host(),
+            "refugee_type": input.refugee_type(),
+            "top_n": int(input.top_n()),
+        }
+
+    @reactive.effect
+    @reactive.event(input.apply_filters)
+    def _apply_filters():
+        applied.set(current_inputs())
+
     @reactive.effect
     @reactive.event(input.reset)
     def _reset():
@@ -97,23 +126,48 @@ def make_state(input: Inputs, session: Session, data: DataStore) -> DashboardSta
         ui.update_selectize("host", selected="All")
         ui.update_select("refugee_type", selected="All cross-border")
         ui.update_slider("top_n", value=30)
+        applied.set(
+            {
+                "year": data.year_max,
+                "crisis": "All Crises",
+                "origin": "All",
+                "host": "All",
+                "refugee_type": "All cross-border",
+                "top_n": 30,
+            }
+        )
+
+    @reactive.calc
+    def year():
+        return int(applied()["year"])
+
+    @reactive.calc
+    def top_n():
+        return int(applied()["top_n"])
+
+    @reactive.calc
+    def crisis():
+        return str(applied()["crisis"])
 
     @reactive.calc
     def types():
-        return selected_types(input.refugee_type())
+        return selected_types(applied()["refugee_type"])
 
     @reactive.calc
     def selected_stock():
-        return apply_filters(data.time_series, year=int(input.year()), types=types(), crisis=input.crisis(), origin=input.origin(), host=input.host())
+        filters = applied()
+        return apply_filters(data.time_series, year=year(), types=types(), crisis=crisis(), origin=filters["origin"], host=filters["host"])
 
     @reactive.calc
     def stock_all_years_same_filters():
-        return apply_filters(data.time_series, year=None, types=types(), crisis=input.crisis(), origin=input.origin(), host=input.host())
+        filters = applied()
+        return apply_filters(data.time_series, year=None, types=types(), crisis=crisis(), origin=filters["origin"], host=filters["host"])
 
     @reactive.calc
     def kpis():
         d = selected_stock()
-        active = apply_filters(data.time_series, year=int(input.year()), types=ACTIVE_FORCED_TYPES, crisis=input.crisis(), origin=input.origin(), host=input.host())
+        filters = applied()
+        active = apply_filters(data.time_series, year=year(), types=ACTIVE_FORCED_TYPES, crisis=crisis(), origin=filters["origin"], host=filters["host"])
         total = float(d["value_observed"].sum(skipna=True)) if len(d) else 0.0
         ref = float(d[d["population_type_std"].eq("Refugees")]["value_observed"].sum(skipna=True)) if len(d) else 0.0
         asylum = float(d[d["population_type_std"].eq("Asylum-seekers")]["value_observed"].sum(skipna=True)) if len(d) else 0.0
@@ -121,4 +175,12 @@ def make_state(input: Inputs, session: Session, data: DataStore) -> DashboardSta
         countries = int(pd.concat([d["origin_country_std"], d["host_country_std"]]).dropna().nunique()) if len(d) else 0
         return {"total": total, "refugees": ref, "asylum": asylum, "idps": idp, "countries": countries}
 
-    return DashboardState(types=types, selected_stock=selected_stock, stock_all_years_same_filters=stock_all_years_same_filters, kpis=kpis)
+    return DashboardState(
+        types=types,
+        year=year,
+        top_n=top_n,
+        crisis=crisis,
+        selected_stock=selected_stock,
+        stock_all_years_same_filters=stock_all_years_same_filters,
+        kpis=kpis,
+    )

@@ -1,0 +1,7 @@
+shiny
+shinywidgets
+anywidget
+pandas
+numpy
+plotly
+pyarrow
