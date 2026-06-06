@@ -29,7 +29,7 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
             ui.tags.ul(
                 ui.tags.li("app.py is a thin entry point."),
                 ui.tags.li("refugee_app/services handles data loading, filters and JSON safety."),
-                ui.tags.li("refugee_app/modules separates hero, maps, rankings, storytelling and method notes."),
+                ui.tags.li("refugee_app/modules separates hero, maps, Sankey, rankings, storytelling and analytics."),
                 ui.tags.li("refugee_app/ui owns theme, layout and scroll-snap sections."),
             ),
             ui.h3("Data contract"),
@@ -43,5 +43,5 @@ def register(input: Inputs, output: Outputs, data: DataStore, state: DashboardSt
             ui.h3("Quality gates"),
             *_quality_rows(data),
             ui.h3("Method note"),
-            ui.p("Graph 5 and Graph 6 use population-stock data. Asylum seeker files are treated as flow data for applications and corridor context. IDPs are separated from default cross-border host rankings."),
+            ui.p("Graph 5 and Graph 6 use population-stock data. Asylum seeker files are treated as flow data for applications, decisions and corridors."),
         )
