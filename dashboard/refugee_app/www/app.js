@@ -1,284 +1,143 @@
-﻿// Production UI helper for the slide-scroll refugee dashboard.
-// This file is intentionally client-side only.
-// It controls slide-dot navigation and forces moving migration markers
-// on Plotly scattergeo route maps.
-
+// Hybrid final dashboard JavaScript.
+// - slide-dot navigation
+// - moving dots for Plotly route maps
+// - no Plotly frames and no Shiny rerender
 (function () {
   "use strict";
 
-  function asArray(value) {
-    if (!value) return [];
-    try {
-      return Array.from(value);
-    } catch (err) {
-      return [];
-    }
-  }
-
-  function syncCommandBarHeight() {
-    const commandBar = document.querySelector(".command-bar");
-    const height = commandBar ? Math.ceil(commandBar.getBoundingClientRect().height) : 148;
-    document.documentElement.style.setProperty("--command-bar-height", `${height}px`);
-  }
-
-  function observeCommandBarHeight() {
-    const commandBar = document.querySelector(".command-bar");
-    if (!commandBar || !window.ResizeObserver) return;
-
-    const observer = new ResizeObserver(syncCommandBarHeight);
-    observer.observe(commandBar);
-  }
+  const movingState = new WeakMap();
 
   function setActiveDot() {
     const sections = Array.from(document.querySelectorAll(".story-slide"));
     const dots = Array.from(document.querySelectorAll(".slide-dots a"));
-
-    if (!sections.length) return;
-
+    if (!sections.length || !dots.length) return;
     let active = 0;
     let best = Infinity;
-
     sections.forEach((section, index) => {
-      const rect = section.getBoundingClientRect();
-      const dist = Math.abs(rect.top + rect.height * 0.45 - window.innerHeight * 0.5);
+      const dist = Math.abs(section.getBoundingClientRect().top - 150);
       if (dist < best) {
         best = dist;
         active = index;
       }
     });
-
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === active);
-    });
-
-    sections.forEach((section, index) => {
-      section.classList.toggle("is-active", index === active);
-      section.classList.toggle("is-past", index < active);
-      section.classList.toggle("is-future", index > active);
-    });
+    dots.forEach((dot, index) => dot.classList.toggle("active", index === active));
   }
 
-  function getPlotlyGraph(outputId) {
-    const host = document.getElementById(outputId);
-    if (!host) return null;
-
-    if (host.classList.contains("js-plotly-plot")) return host;
-
-    return host.querySelector(".js-plotly-plot");
+  function asArray(x) {
+    if (Array.isArray(x)) return x;
+    if (x == null) return [];
+    return [x];
   }
 
-  function getRouteLineTraces(gd) {
-    if (!gd || !gd.data) return [];
-
-    return gd.data
-      .map((trace, index) => ({ trace, index }))
-      .filter(({ trace }) => {
-        if (!trace) return false;
-        if (trace.type !== "scattergeo") return false;
-        if (!String(trace.mode || "").includes("lines")) return false;
-
-        const lat = asArray(trace.lat);
-        const lon = asArray(trace.lon);
-
-        if (lat.length < 2 || lon.length < 2) return false;
-
-        return true;
-      });
+  function getAt(value, index, fallback) {
+    if (Array.isArray(value)) {
+      if (!value.length) return fallback;
+      return value[Math.min(index, value.length - 1)];
+    }
+    if (value == null) return fallback;
+    return value;
   }
 
-  function getMovingTraceIndex(gd) {
-    if (!gd || !gd.data) return -1;
+  function isRouteTrace(trace) {
+    if (!trace) return false;
+    if (trace.type && String(trace.type).toLowerCase() !== "scattergeo") return false;
+    const lat = asArray(trace.lat);
+    const lon = asArray(trace.lon);
+    if (lat.length < 4 || lon.length < 4) return false;
+    const mode = String(trace.mode || "");
+    if (!mode.includes("lines")) return false;
+    const name = String(trace.name || "").toLowerCase();
+    if (name.includes("shock") || name.includes("ring") || name.includes("origin markers") || name.includes("host markers")) return false;
+    if (name.includes("route")) return true;
+    const ht = String(trace.hovertemplate || "").toLowerCase();
+    return ht.includes("people") || !!trace.customdata || !!trace.text;
+  }
 
-    return gd.data.findIndex((trace) => {
-      return trace && trace.name === "Moving groups";
+  function getRouteTraces(gd) {
+    if (!gd || !Array.isArray(gd.data)) return [];
+    const out = [];
+    gd.data.forEach((trace, traceIndex) => {
+      if (isRouteTrace(trace)) out.push({ trace, traceIndex });
     });
+    return out;
   }
 
-  async function ensureMovingTrace(gd) {
-    let movingIndex = getMovingTraceIndex(gd);
+  function findMovingTraceIndex(gd) {
+    if (!gd || !Array.isArray(gd.data)) return -1;
+    return gd.data.findIndex((trace) => String(trace && trace.name ? trace.name : "").toLowerCase() === "moving groups");
+  }
 
-    if (movingIndex >= 0) return movingIndex;
-
-    const routes = getRouteLineTraces(gd);
-    if (!routes.length || !window.Plotly) return -1;
-
-    const initLat = [];
-    const initLon = [];
-    const initText = [];
-
-    routes.forEach(({ trace }, routeIndex) => {
-      const lat = asArray(trace.lat);
-      const lon = asArray(trace.lon);
-      const n = Math.min(lat.length, lon.length);
-
-      if (n < 2) return;
-
-      const pos = (routeIndex * 7) % n;
-      initLat.push(lat[pos]);
-      initLon.push(lon[pos]);
-
-      const traceText = asArray(trace.text);
-      initText.push(traceText.length ? traceText[0] : "Moving refugee group");
-    });
-
-    if (!initLat.length) return -1;
-
-    await Plotly.addTraces(gd, {
+  function ensureMovingTrace(gd, routes) {
+    let idx = findMovingTraceIndex(gd);
+    if (idx >= 0) return idx;
+    if (!routes.length || gd.__addingMovingGroups) return -1;
+    gd.__addingMovingGroups = true;
+    const movingTrace = {
       type: "scattergeo",
       mode: "markers",
-      lat: initLat,
-      lon: initLon,
-      text: initText,
-      hovertemplate: "Moving group<br>%{text}<extra></extra>",
-      marker: {
-        size: 14,
-        color: "#111827",
-        symbol: "circle",
-        opacity: 0.96,
-        line: {
-          width: 2.4,
-          color: "#ffffff"
-        }
-      },
-      showlegend: false,
-      name: "Moving groups"
-    });
-
-    return getMovingTraceIndex(gd);
+      name: "Moving groups",
+      lat: [],
+      lon: [],
+      text: [],
+      customdata: [],
+      marker: { size: 9, color: "#111827", opacity: 0.96, line: { width: 1.6, color: "#ffffff" } },
+      hovertemplate: "Moving group<br>%{text}<br><b>%{customdata:,.0f}</b> people<extra></extra>",
+      showlegend: false
+    };
+    if (window.Plotly && typeof window.Plotly.addTraces === "function") {
+      window.Plotly.addTraces(gd, movingTrace).catch(() => {}).finally(() => { gd.__addingMovingGroups = false; });
+    } else {
+      gd.__addingMovingGroups = false;
+    }
+    return -1;
   }
 
-  async function startMovingPeople(outputId) {
-    const gd = getPlotlyGraph(outputId);
-
-    if (!gd || !window.Plotly) return false;
-
-    const routes = getRouteLineTraces(gd);
-    if (!routes.length) return false;
-
-    const movingIndex = await ensureMovingTrace(gd);
-    if (movingIndex < 0) return false;
-
-    // Remove old Plotly animation buttons if previous figure had them.
+  function animateOneGraph(gd) {
+    if (!window.Plotly || !gd || !Array.isArray(gd.data)) return;
+    const routes = getRouteTraces(gd);
+    if (!routes.length) return;
+    const movingIndex = ensureMovingTrace(gd, routes);
+    if (movingIndex < 0) return;
+    let state = movingState.get(gd);
+    if (!state) {
+      state = { tick: 0 };
+      movingState.set(gd, state);
+    }
+    state.tick += 1;
+    const latOut = [], lonOut = [], textOut = [], dataOut = [];
+    routes.forEach((item, routeIndex) => {
+      const trace = item.trace;
+      const lat = asArray(trace.lat), lon = asArray(trace.lon);
+      if (lat.length < 2 || lon.length < 2) return;
+      const step = (state.tick + routeIndex * 7) % Math.min(lat.length, lon.length);
+      latOut.push(lat[step]);
+      lonOut.push(lon[step]);
+      textOut.push(getAt(trace.text, step, String(trace.name || "Route")));
+      dataOut.push(getAt(trace.customdata, step, null));
+    });
+    if (!latOut.length) return;
     try {
-      if (gd.layout && gd.layout.updatemenus && gd.layout.updatemenus.length) {
-        Plotly.relayout(gd, { updatemenus: [] });
-      }
-    } catch (err) {}
-
-    if (gd.__movingPeopleTimer) return true;
-
-    let step = 0;
-
-    gd.__movingPeopleTimer = window.setInterval(() => {
-      try {
-        const freshMovingIndex = getMovingTraceIndex(gd);
-        if (freshMovingIndex < 0) return;
-
-        const freshRoutes = getRouteLineTraces(gd);
-        if (!freshRoutes.length) return;
-
-        const nextLat = [];
-        const nextLon = [];
-        const nextText = [];
-
-        freshRoutes.forEach(({ trace }, routeIndex) => {
-          const lat = asArray(trace.lat);
-          const lon = asArray(trace.lon);
-          const n = Math.min(lat.length, lon.length);
-
-          if (n < 2) return;
-
-          const offset = (routeIndex * 9) % n;
-          const position = (step + offset) % n;
-
-          nextLat.push(lat[position]);
-          nextLon.push(lon[position]);
-
-          const traceText = asArray(trace.text);
-          nextText.push(traceText.length ? traceText[position] || traceText[0] : "Moving refugee group");
-        });
-
-        if (!nextLat.length) return;
-
-        Plotly.restyle(
-          gd,
-          {
-            lat: [nextLat],
-            lon: [nextLon],
-            text: [nextText],
-            marker: [{
-              size: 14,
-              color: "#111827",
-              symbol: "circle",
-              opacity: 0.96,
-              line: {
-                width: 2.4,
-                color: "#ffffff"
-              }
-            }]
-          },
-          [freshMovingIndex]
-        );
-
-        step = (step + 1) % 100000;
-      } catch (err) {
-        console.warn("Moving migration markers paused:", err);
-      }
-    }, 70);
-
-    gd.classList.add("moving-people-active");
-    return true;
+      window.Plotly.restyle(gd, { lat: [latOut], lon: [lonOut], text: [textOut], customdata: [dataOut] }, [movingIndex]);
+    } catch (err) {
+      // Keep demo safe even if a browser-side widget is mid-render.
+      console.warn("Moving-dot restyle skipped", err);
+    }
   }
 
-  function scanAndAnimate() {
-    ["flow_map", "crisis_routes"].forEach((id) => {
-      startMovingPeople(id);
+  function animateMovingDots() {
+    if (document.hidden) return;
+    Array.from(document.querySelectorAll(".js-plotly-plot")).forEach((gd) => {
+      try { animateOneGraph(gd); } catch (err) { console.warn("Moving-dot graph skipped", err); }
     });
   }
 
-  function installObserver() {
-    const observer = new MutationObserver(() => {
-      window.setTimeout(scanAndAnimate, 250);
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
+  function startAnimationLoop() {
+    if (window.__refugeeMovingDotsStarted) return;
+    window.__refugeeMovingDotsStarted = true;
+    setInterval(animateMovingDots, 170);
   }
 
   window.addEventListener("scroll", setActiveDot, { passive: true });
-  window.addEventListener("resize", () => {
-    syncCommandBarHeight();
-    setActiveDot();
-  }, { passive: true });
-
-  window.addEventListener("load", () => {
-    syncCommandBarHeight();
-    observeCommandBarHeight();
-    setActiveDot();
-    installObserver();
-
-    [200, 600, 1200, 2200, 3500, 5000].forEach((delay) => {
-      window.setTimeout(scanAndAnimate, delay);
-    });
-
-    window.setInterval(scanAndAnimate, 1800);
-  });
-
-  window.refugeeDashboard = {
-    scanAndAnimate,
-    startMovingPeople,
-    debugMoving: function () {
-      ["flow_map", "crisis_routes"].forEach((id) => {
-        const gd = getPlotlyGraph(id);
-        console.log(id, {
-          graphFound: !!gd,
-          routeLines: gd ? getRouteLineTraces(gd).length : 0,
-          movingTrace: gd ? getMovingTraceIndex(gd) : -1
-        });
-      });
-      scanAndAnimate();
-    }
-  };
+  window.addEventListener("load", function () { setActiveDot(); startAnimationLoop(); });
+  setTimeout(startAnimationLoop, 700);
 })();
