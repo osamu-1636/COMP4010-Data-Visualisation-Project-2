@@ -8,7 +8,7 @@ and a clean app handoff from preprocessing + EDA outputs.
 ## Architecture
 
 ```text
-refugee_dashboard_modular_10_10/
+refugee_dashboard/
 ├── app.py
 ├── refugee_app/
 │   ├── modules/
