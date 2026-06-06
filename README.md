@@ -1,8 +1,6 @@
-# Forced Migration Dashboard — Hybrid Excellent Final
+# Forced Migration Dashboard
 
-This folder is the final merged codebase for the COMP4010 Project 2 forced migration dashboard.
-It preserves the clean modular GitHub architecture and adds only the final selected rubric-facing improvements.
-
+This folder is the final COMP4010 Project 2 forced migration dashboard.
 ## Final story
 
 **From crisis to corridor**
@@ -25,14 +23,6 @@ It preserves the clean modular GitHub architecture and adds only the final selec
 - Clean handoff from preprocessing/EDA outputs.
 - Tests for smoke, JSON safety and data contract.
 
-## What is added from the final dashboard work
-
-- Graph 4 Sankey is active and shown next to Graph 1.
-- Treemap is placed after Graph 6 to show host concentration without repeating another host bar chart.
-- Distance-band analytics computes haversine origin-host distance and bins corridors into near/regional/far.
-- Route maps have lightweight moving dots via client-side Plotly `restyle`; no Plotly frames are used.
-- Cover SVG has lightweight motion for storytelling.
-- Top filters use an Apply button so expensive charts rerender only after the presenter commits the filter state.
 
 ## Runtime design contract
 
@@ -45,7 +35,7 @@ It preserves the clean modular GitHub architecture and adds only the final selec
 ## Run on Windows PowerShell
 
 ```powershell
-cd "D:\refugee_dashboard_hybrid_excellent_final_v2"
+cd "D:\refugee_dashboard"
 py -m venv .venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
