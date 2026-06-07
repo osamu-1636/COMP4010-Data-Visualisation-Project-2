@@ -1,0 +1,95 @@
+source,target,value_observed,link_layer,metric_type,caveat
+Origin: Syrian Arab Republic,Host: Germany,268866.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Afghanistan,Host: Germany,127892.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Iraq,Host: Germany,97162.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Afghanistan,Host: Turkey,34795.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: El Salvador,Host: United States,33620.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Iraq,Host: Turkey,28874.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Mexico,Host: United States,27879.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Syrian Arab Republic,Host: Greece,27840.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Nigeria,Host: Italy,27088.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Iran,Host: Germany,26872.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Guatemala,Host: United States,25723.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Ukraine,Host: Russia,23534.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: China,Host: United States,19868.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Honduras,Host: United States,19470.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Eritrea,Host: Germany,19103.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Venezuela,Host: United States,18312.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Democratic Republic of the Congo,Host: Uganda,17857.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Albania,Host: Germany,17236.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Serbia and Kosovo (historical UN label),Host: Germany,16763.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Pakistan,Host: Germany,15528.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Myanmar,Host: Malaysia,15069.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Pakistan,Host: Italy,13637.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Iran,Host: Turkey,12927.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Nigeria,Host: Germany,12916.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Russia,Host: Germany,12234.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Afghanistan,Host: Austria,11522.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Sudan,Host: Egypt,11088.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Afghanistan,Host: Hungary,11052.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Somalia,Host: Germany,10232.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Mozambique,Host: Malawi,10114.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Malaysia,Host: Australia,9933.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Albania,Host: France,9044.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Iraq,Host: Jordan,9022.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Gambia,Host: Italy,8923.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Sudan,Host: France,8891.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Afghanistan,Host: Bulgaria,8796.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Syrian Arab Republic,Host: Austria,8642.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Syrian Arab Republic,Host: Sweden,8602.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Haiti,Host: France,8495.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Origin: Iraq,Host: Syrian Arab Republic,8316.0,origin_to_host,asylum_applications_observed,"Applications are flow counts, not refugee stock."
+Host: Australia,Status: Recognized,54.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Australia,Status: Rejected,3148.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Australia,Status: Otherwise closed,275.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Austria,Status: Recognized,17284.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Austria,Status: Rejected,182.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Austria,Status: Other decision,2278.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Austria,Status: Otherwise closed,3619.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Bulgaria,Status: Rejected,430.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Bulgaria,Status: Other decision,9.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Egypt,Status: Recognized,3867.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Egypt,Status: Rejected,1917.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Egypt,Status: Otherwise closed,3335.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: France,Status: Recognized,2615.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: France,Status: Rejected,14243.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: France,Status: Other decision,1342.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: France,Status: Otherwise closed,2265.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Germany,Status: Recognized,248744.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Germany,Status: Rejected,134763.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Germany,Status: Other decision,167878.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Germany,Status: Otherwise closed,84277.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Greece,Status: Recognized,1859.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Greece,Status: Rejected,20.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Greece,Status: Otherwise closed,608.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Hungary,Status: Recognized,28.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Hungary,Status: Rejected,1484.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Hungary,Status: Other decision,69.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Hungary,Status: Otherwise closed,15170.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Italy,Status: Recognized,1201.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Italy,Status: Rejected,26993.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Italy,Status: Other decision,10497.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Jordan,Status: Recognized,695.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Jordan,Status: Otherwise closed,6.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Malawi,Status: Otherwise closed,6618.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Malaysia,Status: Recognized,18917.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Malaysia,Status: Rejected,1397.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Russia,Status: Recognized,33.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Russia,Status: Other decision,21095.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Russia,Status: Otherwise closed,1320.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Sweden,Status: Recognized,2567.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Sweden,Status: Rejected,1132.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Sweden,Status: Other decision,41692.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Sweden,Status: Otherwise closed,5133.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Syrian Arab Republic,Status: Recognized,550.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Syrian Arab Republic,Status: Rejected,24.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Syrian Arab Republic,Status: Otherwise closed,252.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Turkey,Status: Recognized,17863.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Turkey,Status: Rejected,866.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Turkey,Status: Otherwise closed,22214.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Uganda,Status: Recognized,11850.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Uganda,Status: Rejected,1379.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: Uganda,Status: Otherwise closed,433.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: United States,Status: Recognized,12086.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: United States,Status: Rejected,9865.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.
+Host: United States,Status: Otherwise closed,39882.0,host_to_status,asylum_decisions_observed,Decision outcomes are same-year administrative totals and should not be interpreted as cohort outcomes for the applications link.

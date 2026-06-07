@@ -1,0 +1,10 @@
+rubric_item,status,evidence
+At least 5 charts,satisfied,"Graph 5, Graph 6, trend, choropleth, Sankey, monthly, demographics, forecast, network"
+At least 3 chart types,satisfied,"Ranked bars, line/area, choropleth, Sankey, network, pyramid, forecast line"
+Python Shiny interactive dashboard,requires app.py integration,EDA outputs filter_options.json and chart-ready CSVs
+Spatial/spatio-temporal visualization,satisfied,choropleth_host_latest.csv; animated_host_map_by_year.csv
+Network or flow visualization,satisfied,top_origin_host_corridors.csv; network_metrics_top_corridors.csv; sankey_top_corridors.csv
+Forecasting / model comparison,satisfied_with_caveat,forecast_global_active_forced_displacement.csv; forecast_model_comparison.csv
+Reproducibility,satisfied,input_validation_checklist.csv; eda_manifest.json; deterministic scripts
+Storytelling,satisfied_with_manual_annotations,chart_narrative_cards.csv; crisis_storytelling_template.csv
+Hosting pressure per population,partial_until_WDI_added,host_pressure_per_100k.csv explicitly marks WDI denominator status

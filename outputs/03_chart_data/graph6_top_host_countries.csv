@@ -1,0 +1,11 @@
+rank,host_country_std,host_iso3,host_mapping_status,host_map_eligible_flag,value_observed,source_rows,observed_rows,share_of_selected_total,year,population_scope,metric_type
+1,Turkey,TUR,manual_iso,True,3115275.0,243,197,0.15047375486352005,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+2,Pakistan,PAK,pycountry_exact_or_alias,True,1357399.0,72,59,0.06556497400004405,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+3,Germany,DEU,pycountry_exact_or_alias,True,1256691.0,501,440,0.06070058453048025,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+4,Uganda,UGA,pycountry_exact_or_alias,True,1162672.0,99,78,0.05615928658454825,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+5,Lebanon,LBN,pycountry_exact_or_alias,True,1031217.0,186,132,0.04980975806922167,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+6,Iran,IRN,manual_iso,True,979526.0,18,18,0.0473129836712471,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+7,Ethiopia,ETH,pycountry_exact_or_alias,True,794094.0,81,59,0.03835626257540412,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+8,Jordan,JOR,pycountry_exact_or_alias,True,720748.0,144,113,0.03481351016214374,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+9,United States,USA,manual_iso,True,712731.0,561,516,0.03442627369257337,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
+10,Kenya,KEN,pycountry_exact_or_alias,True,494822.0,114,93,0.02390085123434583,2016,Refugees+Asylum-seekers+Others of concern,population_stock_observed
