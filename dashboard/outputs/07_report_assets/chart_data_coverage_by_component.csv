@@ -1,9 +1,0 @@
-chart_or_component,primary_dataset,rows_available,year_coverage,latest_year_used,readiness
-KPI cards,time_series_clean,298441,1951-2016,2016,ready
-Graph 5 top origins,time_series_clean,298441,1951-2016,2016,ready
-Graph 6 top hosts,time_series_clean,298441,1951-2016,2016,ready
-Origin-host flow/Sankey,time_series_clean / asylum_seekers_clean,428161,stock 1951-2016; asylum 2000-2016,2016,ready_with_caveat
-Monthly asylum trend,asylum_seekers_monthly_clean,332189,1999-2017,2016,ready
-Demographics,demographics_clean,18356,2001-2016,2016,ready
-Resettlement,resettlement_clean,9075,1959-2016,2016,ready
-Hosting pressure per 100k,time_series_clean + WDI,298441,1951-2016,2016,partial_until_WDI_added

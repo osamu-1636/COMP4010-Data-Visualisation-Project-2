@@ -1,8 +1,0 @@
-dataset,clean_file,exists,rows,columns,size_mb,metric_family
-resettlement,01_clean/resettlement_clean.csv.gz,True,9075,20,0.155,durable_solution_flow
-asylum_seekers_monthly,01_clean/asylum_seekers_monthly_clean.csv.gz,True,332189,22,3.812,asylum_application_flow_monthly
-asylum_seekers,01_clean/asylum_seekers_clean.csv.gz,True,129720,91,7.243,asylum_application_and_decision_flow
-demographics,01_clean/demographics_clean.csv.gz,True,18356,127,1.78,demographics_stock
-persons_of_concern_wide,01_clean/persons_of_concern_clean_wide.csv.gz,True,117321,69,3.549,population_stock_wide
-persons_of_concern_long,01_clean/persons_of_concern_clean_long.csv.gz,True,821247,19,11.804,population_stock_long
-time_series,01_clean/time_series_clean.csv.gz,True,298441,22,4.302,population_stock

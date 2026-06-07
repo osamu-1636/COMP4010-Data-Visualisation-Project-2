@@ -1,7 +1,0 @@
-dataset,numeric_columns,observed_cells,zero_cells,blank_cells,redacted_star_cells,negative_raw_cells,observed_sum_all_numeric
-asylum_seekers,11,1299659,595830,105316,21942,3,361294486.0
-asylum_seekers_monthly,2,652537,29,0,11841,0,677917568.0
-demographics,17,240913,58911,66129,5010,0,592545068.0
-persons_of_concern,9,514252,116994,534990,6647,0,2197134721.0
-resettlement,2,17993,0,0,157,0,22245842.0
-time_series,2,592673,129177,0,4208,1,1580768559.0

@@ -1,6 +1,0 @@
-filter_name,type,n_options,default,source
-Year,slider,66,2016,time_series_clean
-Population category,multi-select,7,Refugees+Asylum-seekers+Others of concern,time_series_clean
-Origin country,searchable select,221,All,time_series_clean
-Host/asylum country,searchable select,198,All,time_series_clean
-Metric family,radio/tabs,2,Stock,stock vs flow separation

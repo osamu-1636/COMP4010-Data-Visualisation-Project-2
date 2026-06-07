@@ -1,7 +1,0 @@
-dataset,file,rows,columns,year_min,year_max,raw_columns
-resettlement,resettlement.csv,9075,4,1959,2016,Country / territory of asylum/residence | Origin | Year | Value
-asylum_seekers_monthly,asylum_seekers_monthly.csv,332189,5,1999,2017,Country / territory of asylum/residence | Origin | Year | Month | Value
-demographics,demographics.csv,18356,19,2001,2016,Year | Country / territory of asylum/residence | Location Name | Female 0-4 | Female 5-11 | Female 5-17 | Female 12-17 | Female 18-59 | Female 60+ | F: Unknown | F: Total | Male 0-4 | Male 5-11 | Male 5-17 | Male 12-17 | Male 18-59 | Male 60+ | M: Unknown | M: Total
-asylum_seekers,asylum_seekers.csv,129720,14,2000,2016,Year | Country / territory of asylum/residence | Origin | RSD procedure type / level | Tota pending start-year | of which UNHCR-assisted(start-year) | Applied during year | decisions_recognized | decisions_other | Rejected | Otherwise closed | Total decisions | Total pending end-year | of which UNHCR-assisted(end-year)
-persons_of_concern,persons_of_concern.csv,117321,11,1951,2016,Year | Country / territory of asylum/residence | Origin | Refugees (incl. refugee-like situations) | Asylum-seekers (pending cases) | Returned refugees | Internally displaced persons (IDPs) | Returned IDPs | Stateless persons | Others of concern | Total Population
-time_series,time_series.csv,298441,5,1951,2016,Year | Country / territory of asylum/residence | Origin | Population type | Value
