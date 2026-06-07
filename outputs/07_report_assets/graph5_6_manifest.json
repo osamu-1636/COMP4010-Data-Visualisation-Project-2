@@ -1,0 +1,14 @@
+{
+  "section": "Graph 5 and Graph 6 only",
+  "input_files": [
+    "03_chart_data/graph5_top_origin_countries.csv",
+    "03_chart_data/graph6_top_host_countries.csv"
+  ],
+  "output_files": [
+    "04_figures/graph5_top_origin_countries.png",
+    "04_figures/graph6_top_host_countries.png"
+  ],
+  "year": "2016",
+  "scope": "Refugees + Asylum-seekers + Others of concern",
+  "metric": "observed population stock from cleaned time_series data"
+}

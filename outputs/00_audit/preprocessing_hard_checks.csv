@@ -1,0 +1,17 @@
+check,status,detail
+no_row_loss__resettlement,PASS,"raw=9075, clean=9075"
+no_row_loss__asylum_seekers_monthly,PASS,"raw=332189, clean=332189"
+no_row_loss__demographics,PASS,"raw=18356, clean=18356"
+no_row_loss__asylum_seekers,PASS,"raw=129720, clean=129720"
+no_row_loss__persons_of_concern_wide,PASS,"raw=117321, clean=117321"
+no_row_loss__time_series,PASS,"raw=298441, clean=298441"
+no_negative_observed_values__resettlement,PASS,negative_cells=0
+no_negative_observed_values__asylum_seekers_monthly,PASS,negative_cells=0
+no_negative_observed_values__demographics,PASS,negative_cells=0
+no_negative_observed_values__asylum_seekers,PASS,negative_cells=0
+no_negative_observed_values__persons_of_concern_wide,PASS,negative_cells=0
+no_negative_observed_values__persons_of_concern_long,PASS,negative_cells=0
+no_negative_observed_values__time_series,PASS,negative_cells=0
+country_mapping_unmapped_rows,PASS,unique_unmapped_values=0; see 00_audit/unmapped_country_values.csv
+asylum_decision_total_mismatch_documented,DOCUMENTED,"rows=1782; reported totals are retained, missing totals are recomputed from components"
+literal_NA_rsd_stage_protected,PASS,"raw '/ NA' rows=2234, parsed NEW rows=2234"

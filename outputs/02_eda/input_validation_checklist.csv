@@ -1,0 +1,7 @@
+file,exists,columns_in_preview,required_columns,missing_required_columns,status
+time_series_clean.csv.gz,True,22,year | population_type_std | value_observed | host_country_std | host_iso3 | host_map_eligible_flag | origin_country_std | origin_iso3 | origin_map_eligible_flag,,PASS
+persons_of_concern_clean_long.csv.gz,True,19,year | population_type_std | value_observed,,PASS
+asylum_seekers_clean.csv.gz,True,91,year | applications_observed | recognized_observed | rejected_observed | total_decisions_final | host_country_std | origin_country_std,,PASS
+asylum_seekers_monthly_clean.csv.gz,True,22,year | month_num | month | applications_monthly_observed,,PASS
+demographics_clean.csv.gz,True,127,year | host_country_std,,PASS
+resettlement_clean.csv.gz,True,20,year | resettlement_observed | host_country_std | origin_country_std,,PASS
